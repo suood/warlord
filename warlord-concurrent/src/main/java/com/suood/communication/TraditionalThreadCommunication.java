@@ -19,7 +19,7 @@ public class TraditionalThreadCommunication
         }).start();
         for (int i = 1; i <= 50; i++)
         {
-            business.main(i);
+            business.busi(i);
         }
     }
 }
@@ -49,7 +49,7 @@ class Business
         this.notify();
     }
 
-    public synchronized void main(int i)
+    public synchronized void busi(int i)
     {
         while (bShouldSub)
         {
