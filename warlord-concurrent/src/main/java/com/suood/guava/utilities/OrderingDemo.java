@@ -16,7 +16,9 @@ import static org.junit.Assert.assertEquals;
  * Created by FENGCUIJIE on 2017/2/27.
  */
 public class OrderingDemo {
-    public void order_list_of_strings_alphabetically_case_insensitive () {
+
+
+    public void order_list_of_strings_alphabetically_case_insensitive() {
 
         List<String> TOP_RATED_CENTERS = Lists.newArrayList(
                 "Dawson", "Gatski", "Langer", "Hein",
@@ -24,13 +26,12 @@ public class OrderingDemo {
                 "Stephenson", "Ringo", "Otto", "Webster");
 
 
-        String topNameAlphabetically = Ordering
-                .from(String.CASE_INSENSITIVE_ORDER)
-                .min(TOP_RATED_CENTERS);
+        String topNameAlphabetically = Ordering.from(String.CASE_INSENSITIVE_ORDER).min(TOP_RATED_CENTERS);
 
 //        assertEquals("Dawson", topNameAlphabetically);
     }
-    public void find_max_value_from_list_of_integers_guava () {
+
+    public Integer find_max_value_from_list_of_integers_guava() {
 
         List<Integer> top10CentersNumbers = Lists.newArrayList(
                 63, 52, 62, 0, 66, 0, 57, 51, 60
@@ -41,8 +42,10 @@ public class OrderingDemo {
                 .max(top10CentersNumbers);
 
 //        assertEquals(new Integer (66), maxJerseyNumber);
+        return maxJerseyNumber;
     }
-    public void order_elements_based_on_length () {
+
+    public void order_elements_based_on_length() {
 
         Ordering<String> byLength = new Ordering<String>() {
             @Override
@@ -67,7 +70,8 @@ public class OrderingDemo {
 
 //        assertEquals("Great Belt Bridge", famousBridges.get(5));
     }
-    public void reverse_elements_in_list () {
+
+    public void reverse_elements_in_list() {
 
         Ordering<String> byLength = new Ordering<String>() {
             @Override
@@ -85,14 +89,13 @@ public class OrderingDemo {
                 "Ponte Vecchio"
         );
 
-        Collections.sort(famousBridges,
-                byLength.nullsFirst().reverse());
-
+        Collections.sort(famousBridges, byLength.nullsFirst().reverse());
 
 
         assertEquals("Great Belt Bridge", famousBridges.get(0));
     }
-    public void order_list_of_integer_least_to_greatest () {
+
+    public void order_list_of_integer_least_to_greatest() {
 
         List<Integer> startingLineUp = Lists.newArrayList(
                 73, 58, 66, 57, 32, 88, 90, 12, 15, 99, 11
@@ -106,7 +109,8 @@ public class OrderingDemo {
 
 //        assertEquals(new Integer(11), startingLineUpInOrder.get(0));
     }
-    public void order_list_of_integer_greatest_to_least () {
+
+    public void order_list_of_integer_greatest_to_least() {
 
         List<Integer> startingLineUp = Lists.newArrayList(
                 73, 58, 66, 57, 32, 88, 90, 12, 15, 99, 11
@@ -120,7 +124,8 @@ public class OrderingDemo {
 
 //        assertEquals(new Integer(99), startingLineUpGreatestToLeast.get(0));
     }
-    public void is_list_of_numbers_sorted_in_java_with_guava () {
+
+    public void is_list_of_numbers_sorted_in_java_with_guava() {
 
         List<Integer> uwConferenceTitles = Lists.newArrayList(
                 1896, 1897, 1901, 1906, 1912,
@@ -134,7 +139,8 @@ public class OrderingDemo {
 
 //        assertTrue(isSorted);
     }
-    public void is_list_of_strings_sorted_in_java_with_guava () {
+
+    public void is_list_of_strings_sorted_in_java_with_guava() {
 
         List<String> secConferenceEast = Lists.newArrayList(
                 "Florida",
@@ -150,7 +156,8 @@ public class OrderingDemo {
 
 //        assertTrue(isSorted);
     }
-    public void is_list_of_strings_sorted_case_insensitive_in_java_with_guava () {
+
+    public void is_list_of_strings_sorted_case_insensitive_in_java_with_guava() {
 
         List<String> secConferenceEast = Lists.newArrayList(
                 "alabama",
@@ -163,7 +170,8 @@ public class OrderingDemo {
 
 //        assertTrue(isSorted);
     }
-    public void order_by_object_field () {
+
+    public void order_by_object_field() {
 
         List<GlassWare> beerGlasses = Lists.newArrayList(
                 new GlassWare("Flute Glass", "Enhances and showcases..."),
@@ -189,11 +197,15 @@ public class OrderingDemo {
         GlassWare lastBeerGlass = byGlassWareName.max(beerGlasses);
         assertEquals("Pint Glass", lastBeerGlass.getName());
     }
+
     public static void main(String[] args) {
+        OrderingDemo orderingDemo = new OrderingDemo();
+        orderingDemo.find_max_value_from_list_of_integers_guava();
     }
 
 
 }
+
 class GlassWare {
 
     private String name;
