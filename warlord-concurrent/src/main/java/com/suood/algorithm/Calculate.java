@@ -2,6 +2,7 @@ package com.suood.algorithm;
 
 import com.google.common.math.DoubleMath;
 import com.google.common.math.Stats;
+import org.apache.commons.math.stat.descriptive.moment.Mean;
 
 import java.util.Arrays;
 
@@ -17,6 +18,10 @@ public class Calculate {
     double averageGuava(int[]arrayOfInt){
         return Stats.meanOf(array);
     }
+//    double averageCommons(int[]arrayOfInt){
+//        Mean mean = new Mean();
+//        return mean.setData((double[]) array);
+//    }
     public static void main(String[] args) {
         Calculate calculate = new Calculate();
         System.out.println(calculate.averageJDK8(Calculate.array) );
