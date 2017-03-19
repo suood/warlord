@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>warlord-concurrent</module>
+        <module>warlord-much</module>
         <module>warlord-curator</module>
         <!--<module>ceres-logger</module>-->
         <!--<module>ceres-mapper</module>-->

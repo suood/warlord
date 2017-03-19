@@ -1,4 +1,4 @@
-package com.suood.structure.Tree;
+package com.suood.structure.tree;
 
 import java.util.Stack;
 
