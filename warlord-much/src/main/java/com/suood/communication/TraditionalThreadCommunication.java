@@ -49,16 +49,11 @@ class Business
         this.notify();
     }
 
-    public synchronized void busi(int i)
-    {
-        while (bShouldSub)
-        {
-            try
-            {
+    public synchronized void busi(int i){
+        while (bShouldSub){
+            try{
                 this.wait();
-            }
-            catch (InterruptedException e)
-            {
+            }catch (InterruptedException e){
                 e.printStackTrace();
             }
         }

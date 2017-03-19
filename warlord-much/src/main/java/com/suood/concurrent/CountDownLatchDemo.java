@@ -44,7 +44,7 @@ public class CountDownLatchDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }finally {
-                latch.countDown();
+                latch.countDown();//这里非常有必要放在finally里面执行，无论如何都会countDown
             }
             System.out.println("Worker "+workerName+" do work complete at "+sdf.format(new Date()));
 
