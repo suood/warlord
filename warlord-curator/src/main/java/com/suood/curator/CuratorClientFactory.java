@@ -5,6 +5,8 @@ import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by FENGCUIJIE on 2017/3/13.
  */
@@ -36,7 +38,7 @@ public class CuratorClientFactory {
                 .build();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         String connectionString = "118.190.40.207:2181,139.129.227.18:2181,114.215.16.32:2181";
         CuratorFramework client =  CuratorClientFactory.getSimpleClient(connectionString);
         client.start();
