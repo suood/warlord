@@ -16,6 +16,9 @@ public class ConditionDemo {
 
     public static void main(String[] args) throws InterruptedException {
         ConditionDemo conditionDemo = new ConditionDemo();
+//        if(conditionDemo.lock.tryLock() || conditionDemo.lock.tryLock(10,TimeUnit.MILLISECONDS)){
+//            //do something
+//        }
         conditionDemo.lock.lock();
         conditionDemo.lock.lock();
         conditionDemo.lock.lock();
