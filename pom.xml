@@ -13,6 +13,7 @@
         <module>warlord-curator</module>
         <module>warlord-common</module>
         <module>warlord-tensor</module>
+        <module>warlord-swagger</module>
         <!--<module>ceres-mapper</module>-->
         <!--<module>ceres-service</module>-->
         <!--<module>ceres-controller</module>-->
