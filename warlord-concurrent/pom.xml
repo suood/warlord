@@ -18,11 +18,6 @@
             <artifactId>guava</artifactId>
             <version>${guava-version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>apache-curator</artifactId>
-            <version>3.2.1</version>
-        </dependency>
     </dependencies>
     <build>
         <finalName>warlord-concurrent</finalName>

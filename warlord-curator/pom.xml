@@ -11,10 +11,7 @@
 
     <artifactId>warlord-curator</artifactId>
 
-    <properties>
-        <guava-version>21.0</guava-version>
-        <curator.version>3.3.0</curator.version>
-    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.curator</groupId>
@@ -41,11 +38,11 @@
             <artifactId>curator-recipes</artifactId>
             <version>${curator.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.curator</groupId>
-            <artifactId>curator-x-rpc</artifactId>
-            <version>${curator.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.curator</groupId>-->
+            <!--<artifactId>curator-x-rpc</artifactId>-->
+            <!--<version>${curator.version}</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.suood.warlord</groupId>
             <artifactId>warlord-common</artifactId>
