@@ -7,11 +7,11 @@ import java.util.List;
  * Created by Alexander on 2017/9/13.
  */
 
-// VM args -Xms20m -Xmx20m -XX:HeapDumpOnOutOfMemoryError
+// VM args -Xms20m -Xmx30m -XX:+HeapDumpOnOutOfMemoryError
 public class HeapOutOfMemoryTest {
 
     public void heapOOMMethod(){
-        List objList = new ArrayList<OomObject>();
+        List <OomObject>objList = new ArrayList<OomObject>();
         while(true){
             objList.add(new OomObject());
         }
