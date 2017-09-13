@@ -1,7 +1,7 @@
 package com.suood.algorithm;
 
 /**
- * Created by FENGCUIJIE on 2017/3/11.
+ * Created by Alexander on 2017/3/11.
  * 生成等比数列
  */
 public class GeometricProgression {

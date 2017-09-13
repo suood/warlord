@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Created by FENGCUIJIE on 2017/3/11.
+ * Created by Alexander on 2017/3/11.
  */
 public class SearchNum {
     static  Integer [] array = {77 ,34 ,91 ,71 ,84 ,50 ,29 ,87 ,93 ,68};

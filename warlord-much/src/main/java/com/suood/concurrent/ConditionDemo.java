@@ -6,7 +6,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * Created by FENGCUIJIE on 2017/3/28.
+ * Created by Alexander on 2017/3/28.
  */
 public class ConditionDemo {
     //显示创建偏向锁

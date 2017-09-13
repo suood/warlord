@@ -2,7 +2,7 @@ package com.suood.algorithm;
 import com.google.common.base.Joiner;
 
 /**
- * Created by FENGCUIJIE on 2017/2/27.
+ * Created by Alexander on 2017/2/27.
  */
 public class BubbleSort  {
 

@@ -1,7 +1,7 @@
 package com.suood.concurrent.executors;
 
 /**
- * Created by FENGCUIJIE on 2017/3/31.
+ * Created by Alexander on 2017/3/31.
  */
 public class ForkJoinDemo {
     public static void main(String[] args) {

@@ -14,3 +14,6 @@
 output/*
 *.log
 jdbc.properties
+.DS_Store
+.classpath
+.project

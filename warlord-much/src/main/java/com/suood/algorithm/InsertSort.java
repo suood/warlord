@@ -1,7 +1,7 @@
 package com.suood.algorithm;
 
 /**
- * Created by FENGCUIJIE on 2017/3/17.
+ * Created by Alexander on 2017/3/17.
  * 数组a[n]插入排序认为起始元素a[0]组为有序组，后面的数组元素为无序组a[1]~a[n].
  * 假设数组的有序组为前面的j个元素，无序组为自i开始的后序元素
  * 那么下标i 与j 的关系为，j= i-1 i至少要大于1 排序才有意义（j下标仅仅用于理解有序组和无序组）在排序过程中并无实际意义。

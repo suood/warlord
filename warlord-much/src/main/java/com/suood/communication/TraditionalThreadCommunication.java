@@ -1,7 +1,7 @@
 package com.suood.communication;
 
 /**
- * Created by FENGCUIJIE on 2017/2/26.
+ * Created by Alexander on 2017/2/26.
  */
 public final  class TraditionalThreadCommunication {
     private TraditionalThreadCommunication(){

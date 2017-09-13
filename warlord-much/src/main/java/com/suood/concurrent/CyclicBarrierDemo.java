@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by FENGCUIJIE on 2017/3/20.
+ * Created by Alexander on 2017/3/20.
  *
  */
 public class CyclicBarrierDemo {

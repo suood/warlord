@@ -1,7 +1,7 @@
 package com.suood.patterns.singleton;
 
 /**
- * Created by FENGCUIJIE on 2017/3/10.
+ * Created by Alexander on 2017/3/10.
  */
 public class HungrySingleton {
 

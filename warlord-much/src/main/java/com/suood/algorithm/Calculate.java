@@ -7,7 +7,7 @@ import org.apache.commons.math.stat.descriptive.moment.Mean;
 import java.util.Arrays;
 
 /**
- * Created by FENGCUIJIE on 2017/3/11.
+ * Created by Alexander on 2017/3/11.
  */
 public class Calculate {
     static  int [] array = {77 ,34 ,91 ,71 ,84 ,50 ,29 ,87 ,93 ,68};

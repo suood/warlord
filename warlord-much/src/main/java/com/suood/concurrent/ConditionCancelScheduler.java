@@ -6,7 +6,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Created by FENGCUIJIE on 2017/2/27.
+ * Created by Alexander on 2017/2/27.
  */
 public class ConditionCancelScheduler {
     private static ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();

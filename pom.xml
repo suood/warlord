@@ -11,12 +11,9 @@
     <modules>
         <module>warlord-much</module>
         <module>warlord-curator</module>
-        <!--<module>ceres-logger</module>-->
-        <!--<module>ceres-mapper</module>-->
-        <!--<module>ceres-service</module>-->
-        <!--<module>ceres-controller</module>-->
-        <!--<module>ceres-web</module>-->
-        <!--<module>ceres-pay</module>-->
+        <module>warlord-zookeeper</module>
+        <module>warlord-concurrent</module>
+        <module>warlord-cglib</module>
     </modules>
 
     <build>

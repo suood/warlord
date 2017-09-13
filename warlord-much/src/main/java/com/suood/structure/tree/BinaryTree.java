@@ -3,7 +3,7 @@ package com.suood.structure.tree;
 import java.util.Stack;
 
 /**
- * Created by FENGCUIJIE on 2017/2/27.
+ * Created by Alexander on 2017/2/27.
  */
 public class BinaryTree {
 
@@ -22,7 +22,7 @@ public class BinaryTree {
      *  D     E            F
      *  </pre>
      * @param root
-     * @author WWX
+     * @author Alexander
      */
     public void createBinTree(TreeNode root){
         TreeNode newNodeB = new TreeNode(2,"B");
@@ -219,7 +219,7 @@ public class BinaryTree {
 
     /**
      * 二叉树的节点数据结构
-     * @author WWX
+     * @author Alexander
      */
     private class  TreeNode{
         private int key=0;

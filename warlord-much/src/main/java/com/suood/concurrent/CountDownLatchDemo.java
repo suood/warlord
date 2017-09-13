@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Created by FENGCUIJIE on 2017/3/20.
+ * Created by Alexander on 2017/3/20.
  *
  * CountDownLatch demo
  * 主线程在其他线程完成后继续执行

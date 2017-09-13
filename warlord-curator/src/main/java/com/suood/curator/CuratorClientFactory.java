@@ -11,7 +11,7 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by FENGCUIJIE on 2017/3/13.
+ * Created by Alexander on 2017/3/13.
  */
 public class CuratorClientFactory {
 

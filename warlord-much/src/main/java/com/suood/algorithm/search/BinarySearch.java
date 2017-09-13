@@ -1,7 +1,7 @@
 package com.suood.algorithm.search;
 
 /**
- * Created by FENGCUIJIE on 2017/3/23.
+ * Created by Alexander on 2017/3/23.
  * 二分查找法 {1,3,4,5,6,7,8,9,12,13,47,54,56,57,99,156,568,779,897,1260,1265,35}
  * 当比目标值小的时候 高位记录-1 当比目标值大的时候 低位下标+1
  */

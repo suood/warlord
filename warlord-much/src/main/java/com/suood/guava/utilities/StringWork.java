@@ -11,7 +11,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * Created by FENGCUIJIE on 2017/3/6.
+ * Created by Alexander on 2017/3/6.
  */
 public class StringWork {
 

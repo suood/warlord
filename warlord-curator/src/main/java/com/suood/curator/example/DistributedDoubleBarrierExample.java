@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by FENGCUIJIE on 2017/3/20.
+ * Created by Alexander on 2017/3/20.
  */
 public class DistributedDoubleBarrierExample {
     public static final String CONNECTION_STRING = "118.190.40.207:2181,139.129.227.18:2181,114.215.16.32:2181";

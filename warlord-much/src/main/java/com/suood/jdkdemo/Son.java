@@ -1,7 +1,7 @@
 package com.suood.jdkdemo;
 
 /**
- * Created by FENGCUIJIE on 2017/3/18.
+ * Created by Alexander on 2017/3/18.
  * 代码执行顺序是 父类静态块，子类静态块，创建对象时
  * 首先执行父类非静态块，
  * 然后执行父类构造方法
