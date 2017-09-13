@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>warlord-zookeeper</artifactId>
+    <artifactId>warlord-tensor</artifactId>
 
     <properties>
         <exec.mainClass>org.tensorflow.examples.LabelImage</exec.mainClass>
@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>com.suood.warlord</groupId>
-            <artifactId>warlord-zookeeper</artifactId>
+            <artifactId>warlord-tensor</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
