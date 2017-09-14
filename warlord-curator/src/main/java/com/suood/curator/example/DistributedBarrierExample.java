@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class DistributedBarrierExample {
     public static final String CONNECTION_STRING = "118.190.40.207:2181,139.129.227.18:2181,114.215.16.32:2181";
-    public static final int QTY = 5;
+    public static final int QTY = 3;
     private static final String PATH = "/examples/barrier";
 
     public void example() throws Exception {
