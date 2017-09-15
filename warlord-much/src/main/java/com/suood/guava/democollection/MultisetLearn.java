@@ -12,7 +12,7 @@ import java.util.List;
 public class MultisetLearn {
 
     public static void multsetWordCount(){
-        String strWorld="wer|dfd|dd|dfd|dda|de|dr";
+        String strWorld="wer|dfd|dd|dd|dfd|dda|de|dr";
         String[] words=strWorld.split("\\|");
         List<String> wordList=new ArrayList<String>();
         for (String word : words) {
