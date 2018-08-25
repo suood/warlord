@@ -1,6 +1,7 @@
 package com.suood.forkjoin;
 
-import java.util.ArrayList;
+import com.google.common.collect.Lists;
+
 import java.util.List;
 import java.util.concurrent.RecursiveAction;
 
@@ -14,16 +15,11 @@ public class MyRecursiveAction extends RecursiveAction {
 
     @Override
     protected void compute() {
-
         //if work is above threshold, break tasks up into smaller tasks
         if(this.workLoad > 16) {
             System.out.println("Splitting workLoad : " + this.workLoad);
-
-            List<MyRecursiveAction> subtasks =
-                    new ArrayList<MyRecursiveAction>();
-
+            List<MyRecursiveAction> subtasks = Lists.newArrayList();
             subtasks.addAll(createSubtasks());
-
             for(RecursiveAction subtask : subtasks){
                 subtask.fork();
             }
@@ -34,16 +30,13 @@ public class MyRecursiveAction extends RecursiveAction {
     }
 
     private List<MyRecursiveAction> createSubtasks() {
-        List<MyRecursiveAction> subtasks =
-                new ArrayList<MyRecursiveAction>();
+        List<MyRecursiveAction> subTasks =Lists.newArrayList();
+        MyRecursiveAction subTask1 = new MyRecursiveAction(this.workLoad / 2);
+        MyRecursiveAction subTask2 = new MyRecursiveAction(this.workLoad / 2);
+        subTasks.add(subTask1);
+        subTasks.add(subTask2);
 
-        MyRecursiveAction subtask1 = new MyRecursiveAction(this.workLoad / 2);
-        MyRecursiveAction subtask2 = new MyRecursiveAction(this.workLoad / 2);
-
-        subtasks.add(subtask1);
-        subtasks.add(subtask2);
-
-        return subtasks;
+        return subTasks;
     }
 
 }
