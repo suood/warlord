@@ -2,11 +2,9 @@ package com.suood.forkjoin;
 
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
-import java.util.stream.Collectors;
 
 
 public class MyRecursiveTask extends RecursiveTask<Long> {
