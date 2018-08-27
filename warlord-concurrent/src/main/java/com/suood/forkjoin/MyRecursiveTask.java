@@ -1,9 +1,12 @@
 package com.suood.forkjoin;
 
+import com.google.common.collect.Lists;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
+import java.util.stream.Collectors;
 
 
 public class MyRecursiveTask extends RecursiveTask<Long> {
@@ -20,19 +23,21 @@ public class MyRecursiveTask extends RecursiveTask<Long> {
         if(this.workLoad > 16) {
             System.out.println("Splitting workLoad : " + this.workLoad);
 
-            List<MyRecursiveTask> subtasks =
-                    new ArrayList<MyRecursiveTask>();
+            List<MyRecursiveTask> subtasks = Lists.newArrayList();
             subtasks.addAll(createSubtasks());
 
             for(MyRecursiveTask subtask : subtasks){
                 subtask.fork();
             }
-
-            long result = 0;
+            subtasks.stream().forEach(e->e.fork());
+            subtasks.parallelStream().forEach(e->e.fork());
+            Long result = 0l;
             for(MyRecursiveTask subtask : subtasks) {
                 result += subtask.join();
             }
-            return result;
+            return result ;
+//          return   subtasks.stream().collect(Collectors.summingLong(e->e.join()));
+//          return   subtasks.parallelStream().collect(Collectors.summingLong(e->e.join()));
 
         } else {
             System.out.println("Doing workLoad myself: " + this.workLoad);
@@ -41,8 +46,7 @@ public class MyRecursiveTask extends RecursiveTask<Long> {
     }
 
     private List<MyRecursiveTask> createSubtasks() {
-        List<MyRecursiveTask> subtasks =
-                new ArrayList<MyRecursiveTask>();
+        List<MyRecursiveTask> subtasks =  Lists.newArrayList();
 
         MyRecursiveTask subtask1 = new MyRecursiveTask(this.workLoad / 2);
         MyRecursiveTask subtask2 = new MyRecursiveTask(this.workLoad / 2);
@@ -54,7 +58,7 @@ public class MyRecursiveTask extends RecursiveTask<Long> {
     }
 
     public static void main(String[] args) {
-        MyRecursiveTask myRecursiveTask = new MyRecursiveTask(128);
+        MyRecursiveTask myRecursiveTask = new MyRecursiveTask(2048);
         ForkJoinPool forkJoinPool = ForkJoinPool.commonPool();
         long mergedResult = forkJoinPool.invoke(myRecursiveTask);
 
