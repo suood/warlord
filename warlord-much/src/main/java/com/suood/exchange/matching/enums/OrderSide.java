@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 订单方向（买、卖）
  *
- * @author zhulei
+ * @author Alexander
  * @date 2017/9/2
  */
 @Getter
