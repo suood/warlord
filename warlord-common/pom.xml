@@ -27,6 +27,38 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.54</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.moonsinfo</groupId>
+            <artifactId>snowflake</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>net.snowflake</groupId>-->
+            <!--<artifactId>spark-snowflake_2.10</artifactId>-->
+            <!--<version>2.4.11-spark_2.2</version>-->
+        <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>org.apache.logging.log4j</groupId>-->
             <!--<artifactId>log4j</artifactId>-->
