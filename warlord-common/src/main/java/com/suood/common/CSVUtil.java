@@ -25,10 +25,12 @@ public class CSVUtil {
     List<Sku> totalList =  csvParser.getRecords().stream().map(e->{
 
       String spuId = snowflake.nextId()+"";
+      String spiderNo = e.get(0);
       String spuArray = e.get(1);
       List<Sku> skuList = JSONArray.parseArray(spuArray,Sku.class) ;
       skuList =  skuList.stream().map($-> {
         $.setSpuId(spuId);
+        $.setSpiderNo(spiderNo);
         return $;
       }).collect(Collectors.toList())  ;
       return    skuList;
@@ -38,10 +40,10 @@ public class CSVUtil {
     BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_W_FILE_PATH));
 
     CSVPrinter csvPrinter = new CSVPrinter(writer, CSVFormat.EXCEL
-        .withHeader("spuId", "skuId", "spec"));
+        .withHeader("spiderNo","spuId", "skuId", "spec"));
 
     for (Sku sku : totalList) {
-      csvPrinter.printRecord(sku.spuId,sku.skuId,sku.spec);
+      csvPrinter.printRecord(sku.spiderNo,sku.spuId,sku.skuId,sku.spec);
     }
     csvPrinter.flush();
   }
@@ -49,6 +51,7 @@ public class CSVUtil {
 }
 @Data
 class Sku {
+  String spiderNo;
   String spuId;
   @JSONField (name = "sku_group")
   String  spec;

@@ -16,6 +16,7 @@
         <module>warlord-common</module>
         <module>warlord-tensor</module>
         <module>warlord-swagger</module>
+        <module>warlord-netty</module>
     </modules>
     <properties>
         <guava-version>21.0</guava-version>
