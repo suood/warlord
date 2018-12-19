@@ -23,7 +23,7 @@ public class CountDownLatchDemo {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("all work done at "+sdf.format(new Date()));
+        System.out.println("all w。ork done at "+sdf.format(new Date()));
     }
 
 

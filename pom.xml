@@ -17,6 +17,7 @@
         <module>warlord-tensor</module>
         <module>warlord-swagger</module>
         <module>warlord-netty</module>
+        <module>warlord-springboot</module>
     </modules>
     <properties>
         <guava-version>21.0</guava-version>
