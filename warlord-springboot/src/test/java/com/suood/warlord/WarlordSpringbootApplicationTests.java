@@ -1,4 +1,4 @@
-package com.suood.warlord.warlordspringboot;
+package com.suood.warlord;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
