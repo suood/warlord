@@ -19,3 +19,4 @@ jdbc.properties
 .project
 */.settings/*
 .mvn/**
+*mvn
