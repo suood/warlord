@@ -8,10 +8,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<artifactId>warlord-springboot</artifactId>
-	<!--<version>0.0.1-SNAPSHOT</version>-->
-	<!--<name>warlord-springboot</name>-->
 	<description>warlord-springboot</description>
-
 	<properties>
 		<java.version>1.8</java.version>
 		<springboot.version>2.1.1.RELEASE</springboot.version>
@@ -23,16 +20,16 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>${springboot.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
-			<version>${springboot.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-			<version>${springboot.version}</version>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-data-redis-reactive</artifactId>-->
+			<!--<version>${springboot.version}</version>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-jdbc</artifactId>-->
+			<!--<version>${springboot.version}</version>-->
+		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
@@ -64,11 +61,30 @@
 	</dependencies>
 
 	<build>
+		<finalName>warlord-springboottr</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>2.1.1.RELEASE</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>utf-8</encoding>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
