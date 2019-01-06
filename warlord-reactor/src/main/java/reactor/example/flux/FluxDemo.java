@@ -25,14 +25,9 @@ public class FluxDemo {
   public static void main(String[] args) {
     List <Integer> integerList = Lists.newArrayList();
     Flux.fromStream(IntStream.range(1,1001).boxed())
-        .publishOn(Schedulers.fromExecutor(Executors.newSingleThreadExecutor()))
+//        .publishOn(Schedulers.fromExecutor(Executors.newSingleThreadExecutor()))
 //        .publishOn(Schedulers.elastic())
         .subscribe(System.out::println);
-    try {
-      Thread.sleep(10000);
-    } catch (InterruptedException e) {
-      
-    }
-    System.exit(2);
+
   }
 }
