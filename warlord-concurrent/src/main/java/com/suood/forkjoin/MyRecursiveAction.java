@@ -19,7 +19,7 @@ public class MyRecursiveAction extends RecursiveAction {
         if(this.workLoad > 16) {
             System.out.println("Splitting workLoad : " + this.workLoad);
             List<MyRecursiveAction> subtasks = Lists.newArrayList();
-            subtasks.addAll(createSubtasks());
+            subtasks.addAll(createSubTasks());
             for(RecursiveAction subtask : subtasks){
                 subtask.fork();
             }
@@ -29,7 +29,7 @@ public class MyRecursiveAction extends RecursiveAction {
         }
     }
 
-    private List<MyRecursiveAction> createSubtasks() {
+    private List<MyRecursiveAction> createSubTasks() {
         List<MyRecursiveAction> subTasks =Lists.newArrayList();
         MyRecursiveAction subTask1 = new MyRecursiveAction(this.workLoad / 2);
         MyRecursiveAction subTask2 = new MyRecursiveAction(this.workLoad / 2);
