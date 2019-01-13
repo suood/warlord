@@ -21,12 +21,15 @@ public class FluxDemo {
         .subscribe(System.out::println);
 //    Flux.just(integerList);
   }
+  public Flux<Integer> fluxInteger(){
+    return  Flux.range(1,1000);
+  }
 
   public static void main(String[] args) {
     List <Integer> integerList = Lists.newArrayList();
     Flux.fromStream(IntStream.range(1,1001).boxed())
 //        .publishOn(Schedulers.fromExecutor(Executors.newSingleThreadExecutor()))
-//        .publishOn(Schedulers.elastic())
+        .publishOn(Schedulers.elastic())
         .subscribe(System.out::println);
 
   }
