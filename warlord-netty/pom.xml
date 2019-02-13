@@ -36,7 +36,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>warlord-much</finalName>
+        <finalName>warlord-netty</finalName>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
