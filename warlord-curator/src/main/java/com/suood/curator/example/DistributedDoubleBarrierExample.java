@@ -14,9 +14,9 @@ import java.util.concurrent.TimeUnit;
  * Created by Alexander on 2017/3/20.
  */
 public class DistributedDoubleBarrierExample {
-    public static final String CONNECTION_STRING = "118.190.40.207:2181,139.129.227.18:2181,114.215.16.32:2181";
+    private static final String CONNECTION_STRING = "118.190.40.207:2181,139.129.227.18:2181,114.215.16.32:2181";
     private static final String PATH = "/examples/barrier";
-    public static final int QTY = 5;
+    private static final int QTY = 5;
     public void example() throws Exception {
         CuratorFramework client = CuratorFrameworkFactory.newClient(CONNECTION_STRING, new ExponentialBackoffRetry(1000, 3));
         client.start();
@@ -33,16 +33,13 @@ public class DistributedDoubleBarrierExample {
         for (int i = 0; i < QTY; ++i) {
             final DistributedBarrier barrier = new DistributedBarrier(client, PATH);
             final int index = i;
-            service.submit(new Callable<Void>() {
-                @Override
-                public Void call() throws Exception {
+            service.submit((Callable<Void>) () -> {
 
-                    Thread.sleep((long) (3 * Math.random()));
-                    System.out.println("Client #" + index + " waits on Barrier");
-                    barrier.waitOnBarrier();
-                    System.out.println("Client #" + index + " begins");
-                    return null;
-                }
+                Thread.sleep((long) (3 * Math.random()));
+                System.out.println("Client #" + index + " waits on Barrier");
+                barrier.waitOnBarrier();
+                System.out.println("Client #" + index + " begins");
+                return null;
             });
         }
 
