@@ -3,7 +3,7 @@ package com.suood.patterns.singleton;
 /**
  * Created by Alexander on 2017/3/10.
  * double check
- * 反序列化会有问题
+ * 反序列化会有问题    被序列化的对象反序列化回来之后就不是原来的对象了。
  */
 public class HungrySingleton {
 
