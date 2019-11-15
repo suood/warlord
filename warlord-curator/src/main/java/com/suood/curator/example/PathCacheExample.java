@@ -43,7 +43,7 @@ public class PathCacheExample {
         {
             CloseableUtils.closeQuietly(cache);
             CloseableUtils.closeQuietly(client);
-//            CloseableUtils.closeQuietly(server);
+//            CloseableUtils.closeQuietly(http);
         }
     }
 

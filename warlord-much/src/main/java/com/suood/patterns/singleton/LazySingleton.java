@@ -4,7 +4,8 @@ package com.suood.patterns.singleton;
  * Created by Alexander on 2017/3/10.
  */
 public class LazySingleton {
-    public static LazySingleton instance = new LazySingleton();
+//    public static final LazySingleton instance = new LazySingleton();
+    private static final LazySingleton instance = new LazySingleton();
 
     private LazySingleton(){
 
