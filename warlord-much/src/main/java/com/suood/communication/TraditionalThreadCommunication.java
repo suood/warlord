@@ -22,7 +22,7 @@ public final  class TraditionalThreadCommunication {
 }
 
 class Business {
-    private boolean bShouldSub= true;
+    private volatile boolean bShouldSub= true;
 
     public synchronized void sub(int i) {
         while (!bShouldSub) {

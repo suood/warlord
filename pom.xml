@@ -23,7 +23,7 @@
         <module>learn-reactor</module>
     </modules>
     <properties>
-        <guava-version>21.0</guava-version>
+        <guava-version>28.1-jre</guava-version>
         <curator.version>4.0.0</curator.version>
     </properties>
     <build>
