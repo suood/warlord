@@ -4,10 +4,23 @@ package com.suood.common;// JDK 8及以上支持
 //@Contended
 
 
+import java.util.ArrayList;
+import org.openjdk.jol.info.ClassLayout;
+import org.openjdk.jol.info.GraphLayout;
 import sun.misc.Contended;
 
 
 public class NewFalseSharing {
   @Contended
-  private volatile long usefulVal;
+  private volatile long usefulVal =0l;
+
+  public static void main(String[] args) {
+    NewFalseSharing sharing = new NewFalseSharing();
+//    System.out.println(ClassLayout.parseClass(NewFalseSharing.class).toPrintable());
+    System.out.println(ClassLayout.parseInstance(sharing).toPrintable());
+
+//    System.out.println(ClassLayout.parseClass(ArrayList.class).toPrintable(usefulVal));
+//    System.out.println(GraphLayout.parseInstance(list).toPrintable());
+//    System.out.println(GraphLayout.parseInstance(list).toFootprint());
+  }
 }
