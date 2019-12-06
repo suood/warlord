@@ -18,8 +18,8 @@ public class FalseSharing {
     
 }
 
-
+@sun.misc.Contended
 class NewFalseSharing {
-  @sun.misc.Contended   //配合参数 -XX:-RestrictContended  
+     //配合参数 -XX:-RestrictContended
   private volatile  double usefulVal;
 }
