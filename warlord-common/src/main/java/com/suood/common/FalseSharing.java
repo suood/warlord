@@ -1,8 +1,10 @@
 package com.suood.common;
 
-//伪共享         double 和 long 在jdk 8的时候 
+//伪共享         double 和 long 在jdk 8的时候
 //缓存系统中是以缓存行（cache line）为单位存储的。缓存行通常是 64 字节     32字节的暂时不做讨论
-//1个long zhanyong 8个字节 那么 64字节可以存储8个long 
+//1个long zhanyong 8个字节 那么 64字节可以存储8个long
+// on a mac you can get your CPU’s line size by running sysctl machdep.cpu.cache.linesize.
+//On linux you use getconf: getconf LEVEL1_DCACHE_LINESIZE
 public class FalseSharing {
 
   public volatile long usefulVal;
@@ -21,11 +23,4 @@ public class FalseSharing {
 
 }
 
-// JDK 8及以上支持
-//@sun.misc.Contended  //JDK8       //配合参数 -XX:-RestrictContended
-@jdk.internal.vm.annotation.Contended
-    //jdk 10
-class NewFalseSharing {
 
-  private volatile long usefulVal;
-}
