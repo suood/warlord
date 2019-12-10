@@ -11,8 +11,8 @@ import sun.misc.Contended;
 
 
 public class NewFalseSharing {
-  @Contended
-  private volatile long usefulVal =0l;
+  @Contended("tlr")
+  private volatile long usefulVal =7l;
 
   public static void main(String[] args) {
     NewFalseSharing sharing = new NewFalseSharing();

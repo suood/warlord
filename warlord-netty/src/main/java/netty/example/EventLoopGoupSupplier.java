@@ -6,6 +6,9 @@ import io.netty.channel.epoll.EpollEventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import java.util.function.Supplier;
 
+/**
+ * 实现工厂样式的 Supplier
+ */
 public class EventLoopGoupSupplier implements Supplier<EventLoopGroup> {
 
 
