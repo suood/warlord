@@ -1,5 +1,7 @@
 package com.suood.warlord.rest;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
+
 import com.google.common.collect.Maps;
 import com.suood.warlord.annotation.Limiter;
 import java.util.Map;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController       
 public class DemoController {
 
-  @RequestMapping(path = "/hi/{id}", method = RequestMethod.GET)
+  @RequestMapping(path = "/hi/{id}", method = RequestMethod.GET,produces = APPLICATION_JSON_UTF8_VALUE)
   @Limiter(maxPerSecond = 1) // aop 1 request/per second
   public Map getInfo(@PathVariable("id") String id){
     System.out.println(System.currentTimeMillis());

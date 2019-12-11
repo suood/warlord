@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.Set;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -24,13 +25,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LimiterAop {
 
   public static Set<String> set = Sets.newConcurrentHashSet();
-  public static Map<String, RateLimiter> map = Maps.newConcurrentMap();
+  public static volatile Map<String, RateLimiter> map = Maps.newConcurrentMap();
 
   @Pointcut("execution(* *.*(..)) && @annotation(com.suood.warlord.annotation.Limiter)")
   public void apiLimiter() {
   }
 
-  @Before(value = "apiLimiter()")
+  @Around(value = "apiLimiter()")
   public void acquire(JoinPoint joinPoint) throws TooManyRequestException {
     MethodSignature signature = (MethodSignature) joinPoint.getSignature();
     Method method = signature.getMethod();
