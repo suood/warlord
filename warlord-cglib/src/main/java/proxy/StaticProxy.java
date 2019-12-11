@@ -1,4 +1,4 @@
-package com.suood.patterns.proxy;
+package proxy;
 
 /**
  *  静态代理，常见于Dao imp Service 这种方式的应用。

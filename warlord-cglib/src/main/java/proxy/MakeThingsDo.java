@@ -1,4 +1,4 @@
-package com.suood.patterns.proxy;
+package proxy;
 
 public interface MakeThingsDo {
      void thingsMove();
