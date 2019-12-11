@@ -12,6 +12,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<springboot.version>2.1.1.RELEASE</springboot.version>
+		<guava-version>28.1-jre</guava-version>
 	</properties>
 
 	<dependencies>
@@ -35,7 +36,11 @@
 			<artifactId>spring-boot-starter-webflux</artifactId>
 			<version>${springboot.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+			<version>${springboot.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -57,6 +62,21 @@
 			<artifactId>reactor-test</artifactId>
 			<version>3.2.3.RELEASE</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.vladimir-bukhtoyarov</groupId>
+			<artifactId>bucket4j-core</artifactId>
+			<version>4.6.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.reflections</groupId>
+			<artifactId>reflections</artifactId>
+			<version>0.9.11</version>
 		</dependency>
 	</dependencies>
 
