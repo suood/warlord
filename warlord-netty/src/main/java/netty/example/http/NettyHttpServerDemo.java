@@ -24,6 +24,7 @@ import io.netty.handler.codec.http.HttpHeaders;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.handler.codec.http.HttpServerCodec;
+import io.netty.handler.codec.http.HttpUtil;
 import io.netty.handler.codec.http.HttpVersion;
 
 public class NettyHttpServerDemo {
@@ -65,10 +66,11 @@ public class NettyHttpServerDemo {
                                 HttpResponseStatus.OK,
                                 copiedBuffer(responseMessage.getBytes())
                             );
-                            if (HttpHeaders.isKeepAlive(request)) {
+
+                            if (HttpUtil.isKeepAlive(request)) {
                               response.headers().set(
-                                  HttpHeaders.Names.CONNECTION,
-                                  HttpHeaders.Values.KEEP_ALIVE
+                                  HttpHeaderNames.CONNECTION,
+                                  HttpHeaderNames.KEEP_ALIVE
                               );
                             }
                             response.headers().set(HttpHeaderNames.CONTENT_TYPE,
