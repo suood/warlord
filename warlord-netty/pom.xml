@@ -11,8 +11,17 @@
     <modelVersion>4.0.0</modelVersion>
     <properties>
         <netty-version>4.1.31.Final</netty-version>
+        <grpc.version>1.25.0</grpc.version>
+        <springboot.version>2.1.1.RELEASE</springboot.version>
     </properties>
     <dependencies>
+<!--      spring boot  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-codec-http</artifactId>
@@ -33,6 +42,7 @@
             <artifactId>netty-transport-native-epoll</artifactId>
             <version>${netty-version}</version>
         </dependency>
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
