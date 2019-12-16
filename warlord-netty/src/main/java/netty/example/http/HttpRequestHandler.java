@@ -6,14 +6,13 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
-
 import java.util.HashMap;
 import java.util.Map;
 
 import static io.netty.handler.codec.http.HttpUtil.is100ContinueExpected;
 
 public class HttpRequestHandler<F> extends SimpleChannelInboundHandler<FullHttpRequest> {
-
+   
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) {
         ctx.flush();
