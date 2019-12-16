@@ -1,4 +1,4 @@
-package com.suood.patterns.proxy;
+package proxy;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
