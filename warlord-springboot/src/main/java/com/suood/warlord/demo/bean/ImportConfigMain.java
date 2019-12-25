@@ -9,9 +9,10 @@ public class ImportConfigMain {
     System.out.println("test lazy property");
     // import方式，只能通过全路径获取 
     Object o = context.getBean("com.suood.warlord.demo.bean.Person");
-    Object hellKitty = context.getBean("com.suood.warlord.demo.bean.HelloKitty");
+
     System.out.println(o);
-    System.out.println(hellKitty);
+    
+    Object hellKitty = context.getBean("helloKitty");
     context.close();
   }
 }
