@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component      
 public class Person {
+  
   @Bean(name = "lovePerson")
 //  @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
   @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)

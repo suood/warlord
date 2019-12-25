@@ -9,6 +9,6 @@ public class ChooseImportSelector implements ImportSelector {
   public String[] selectImports(AnnotationMetadata importingClassMetadata) {
     //TODO 可以获取导入类的注解信息
     // TODO 如果找到了指定的 注解 处理业务逻辑
-    return new String[0];
+    return new String[]{"com.suood.warlord.demo.bean.Person"};
   }
 }

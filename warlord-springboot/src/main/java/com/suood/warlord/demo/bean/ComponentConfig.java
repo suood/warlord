@@ -10,6 +10,6 @@ import org.springframework.stereotype.Service;
 @ComponentScan(basePackages={"com.suood.warlord.demo"}, excludeFilters = {
     @ComponentScan.Filter(type = FilterType.ANNOTATION,value = {Controller.class})} )
 //    ,@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE,value = {XXXX.class}))
-public class MainConfig {
+public class ComponentConfig {
 
 }
