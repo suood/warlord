@@ -5,8 +5,8 @@ import com.suood.warlord.demo.condition.HelloKittyImportBeanDefinitionRegistrar;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-@Configuration
-@Import(value = {Person.class, ChooseImportSelector.class,HelloKitty.class, HelloKittyImportBeanDefinitionRegistrar.class})
+@Configuration                                     //Person.class,  //HelloKitty.class,
+@Import(value = { ChooseImportSelector.class, HelloKittyImportBeanDefinitionRegistrar.class})
 public class ImportConfig {
 
 }
