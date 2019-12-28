@@ -1,9 +1,13 @@
 package com.suood.assembly;
 
+/**
+ * 
+ */
 public class NoVisibility  extends Thread{
  private  static boolean flag = false;
  private static int i =0;
-// private volatile  static boolean flag = false;     // MARK volatile同理，多了ACC_VOLATILE标签，运行时处理
+// private volatile  static boolean flag = false;
+// MARK volatile同理，多了ACC_VOLATILE标签，运行时处理    汇编指令反应为 lock 
                     
  @Override
  public void run() {
@@ -17,7 +21,9 @@ public class NoVisibility  extends Thread{
   Thread.sleep(2000);
   flag = true;
   System.out.println(i);
+  
  }
+ 
 }
 
 /**    not volatile       //如果是debug 模式 在 i++处加入断点，程序也会正常退出。^_^~!!!
