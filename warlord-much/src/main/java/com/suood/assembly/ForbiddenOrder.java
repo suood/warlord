@@ -1,103 +1,24 @@
 package com.suood.assembly;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class ForbiddenOrder {
-   int a= 0 ;
-   boolean b =true;
+volatile int a =2;
+//  volatile 保证了可见性，但并没有保证原子性
+//2,2,2,2,5,7,8,9,9,10,11,10,13,12,11,11,18,18,20,19,22,18,22,24,26,21,27,28,30,21,20,33,30,34,35,29,26,38,38,37,36,36,34,33,45,46,47,48,45,44,40,53,54,55,56,40,57,59,60,39,60,62,64,65,59,58,50,69,49,70,71,73,46,75,76,77,77,74,73,81,72,65,84,84,86,87,63,63,89,62,91,88,87,86,86,82,80,79,79,75,
+  public void giveValue() {
+    System.out.print(a+",");
+    a += 1;
+  }
+
+  
 
   public static void main(String[] args) {
-    
+    ForbiddenOrder forbiddenOrder = new ForbiddenOrder();
+    ExecutorService executorService = Executors.newCachedThreadPool();
+    for (int i = 0; i <100 ; i++) {
+      executorService.submit(new Thread(() -> forbiddenOrder.giveValue()));
+    }
   }
 }
-/**
- Last modified 2019-12-28; size 614 bytes
- MD5 checksum 658f4f5729e4c58b058422476f23a78c
- Compiled from "IntegerAdd.java"
- public class com.suood.assembly.IntegerAdd
- minor version: 0
- major version: 52
- flags: ACC_PUBLIC, ACC_SUPER
- Constant pool:
- #1 = Methodref          #6.#24         // java/lang/Object."<init>":()V
- #2 = Fieldref           #5.#25         // com/suood/assembly/IntegerAdd.c:I
- #3 = Fieldref           #26.#27        // java/lang/System.out:Ljava/io/PrintStream;
- #4 = Methodref          #28.#29        // java/io/PrintStream.println:(I)V
- #5 = Class              #30            // com/suood/assembly/IntegerAdd
- #6 = Class              #31            // java/lang/Object
- #7 = Utf8               c
- #8 = Utf8               I
- #9 = Utf8               <init>
- #10 = Utf8               ()V
- #11 = Utf8               Code
- #12 = Utf8               LineNumberTable
- #13 = Utf8               LocalVariableTable
- #14 = Utf8               this
- #15 = Utf8               Lcom/suood/assembly/IntegerAdd;
- #16 = Utf8               main
- #17 = Utf8               ([Ljava/lang/String;)V
- #18 = Utf8               args
- #19 = Utf8               [Ljava/lang/String;
- #20 = Utf8               a
- #21 = Utf8               b
- #22 = Utf8               SourceFile
- #23 = Utf8               IntegerAdd.java
- #24 = NameAndType        #9:#10         // "<init>":()V
- #25 = NameAndType        #7:#8          // c:I
- #26 = Class              #32            // java/lang/System
- #27 = NameAndType        #33:#34        // out:Ljava/io/PrintStream;
- #28 = Class              #35            // java/io/PrintStream
- #29 = NameAndType        #36:#37        // println:(I)V
- #30 = Utf8               com/suood/assembly/IntegerAdd
- #31 = Utf8               java/lang/Object
- #32 = Utf8               java/lang/System
- #33 = Utf8               out
- #34 = Utf8               Ljava/io/PrintStream;
- #35 = Utf8               java/io/PrintStream
- #36 = Utf8               println
- #37 = Utf8               (I)V
- {
- public com.suood.assembly.IntegerAdd();
- descriptor: ()V
- flags: ACC_PUBLIC
- Code:
- stack=1, locals=1, args_size=1
- 0: aload_0
- 1: invokespecial #1                  // Method java/lang/Object."<init>":()V
- 4: return
- LineNumberTable:
- line 3: 0
- LocalVariableTable:
- Start  Length  Slot  Name   Signature
- 0       5     0  this   Lcom/suood/assembly/IntegerAdd;
-
- public static void main(java.lang.String[]);
- descriptor: ([Ljava/lang/String;)V
- flags: ACC_PUBLIC, ACC_STATIC
- Code:
- stack=2, locals=3, args_size=1
- 0: iconst_1
- 1: istore_1
- 2: iconst_2
- 3: istore_2
- 4: iload_1
- 5: iload_2
- 6: iadd
- 7: putstatic     #2                  // Field c:I
- 10: getstatic     #3                  // Field java/lang/System.out:Ljava/io/PrintStream;
- 13: getstatic     #2                  // Field c:I
- 16: invokevirtual #4                  // Method java/io/PrintStream.println:(I)V
- 19: return
- LineNumberTable:
- line 8: 0
- line 9: 2
- line 10: 4
- line 11: 10
- line 12: 19
- LocalVariableTable:
- Start  Length  Slot  Name   Signature
- 0      20     0  args   [Ljava/lang/String;
- 2      18     1     a   I
- 4      16     2     b   I
- }
- SourceFile: "IntegerAdd.java"
-
-*/
