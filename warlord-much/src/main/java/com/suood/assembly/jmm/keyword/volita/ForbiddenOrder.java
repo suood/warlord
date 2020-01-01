@@ -1,7 +1,6 @@
-package com.suood.assembly;
+package com.suood.assembly.jmm.keyword.volita;
 
 import com.suood.patterns.singleton.UnsafeInstance;
-import java.lang.reflect.Field;
 import sun.misc.Unsafe;
 
 //-Xcomp -XX:+UnlockDiagnosticVMOptions -XX:+PrintAssembly

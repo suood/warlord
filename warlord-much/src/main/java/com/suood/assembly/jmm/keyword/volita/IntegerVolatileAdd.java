@@ -1,4 +1,4 @@
-package com.suood.assembly;
+package com.suood.assembly.jmm.keyword.volita;
 
 public class IntegerVolatileAdd {
     private static volatile int c ;
@@ -15,7 +15,7 @@ public class IntegerVolatileAdd {
  Last modified 2019-12-28; size 638 bytes
  MD5 checksum fe20ab255cf6bf688515ec95ed299fdc
  Compiled from "IntegerVolatileAdd.java"
- public class com.suood.assembly.IntegerVolatileAdd
+ public class com.suood.assembly.jmm.keyword.volita.IntegerVolatileAdd
  minor version: 0
  major version: 52
  flags: ACC_PUBLIC, ACC_SUPER
@@ -58,7 +58,7 @@ public class IntegerVolatileAdd {
  #36 = Utf8               println
  #37 = Utf8               (I)V
  {
- public com.suood.assembly.IntegerVolatileAdd();
+ public com.suood.assembly.jmm.keyword.volita.IntegerVolatileAdd();
  descriptor: ()V
  flags: ACC_PUBLIC
  Code:

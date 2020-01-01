@@ -1,4 +1,4 @@
-package com.suood.assembly;
+package com.suood.assembly.jmm.keyword.volita;
 
 import com.suood.patterns.singleton.UnsafeInstance;
 

@@ -1,4 +1,4 @@
-package com.suood.assembly;
+package com.suood.assembly.jmm.keyword.volita;
 
 public class AssemblyAdd {
   
@@ -15,7 +15,7 @@ public class AssemblyAdd {
   Last modified 2019-12-28; size 605 bytes
   MD5 checksum 87625af4383b8bb444b1d3aabbb4545c
   Compiled from "AssemblyAdd.java"
-  public class com.suood.assembly.AssemblyAdd
+  public class com.suood.assembly.jmm.keyword.volita.AssemblyAdd
   minor version: 0
   major version: 52
   flags: ACC_PUBLIC, ACC_SUPER
@@ -56,7 +56,7 @@ public class AssemblyAdd {
   #34 = Utf8               println
   #35 = Utf8               (I)V
   {
-  public com.suood.assembly.AssemblyAdd();
+  public com.suood.assembly.jmm.keyword.volita.AssemblyAdd();
   descriptor: ()V
   flags: ACC_PUBLIC
   Code:

@@ -1,4 +1,4 @@
-package com.suood.assembly;
+package com.suood.assembly.jmm.keyword.volita;
 
 /**
  * 
