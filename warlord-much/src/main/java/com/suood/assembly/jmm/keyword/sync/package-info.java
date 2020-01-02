@@ -54,12 +54,18 @@ package com.suood.assembly.jmm.keyword.sync;
 
 
 /**
- // MARK 锁膨胀
+ // MARK 锁膨胀   不可逆
  MARK WORD
-
+ MarkOop.hpp ->hotspot 源码
  在对象头中（Object Header）存在两部分。
  第一部分用于存储对象自身的运行时数据，HashCode、GC Age、锁标记位、是否为偏向锁。等。
  一般为32位或者64位（视操作系统位数定）。官方称之为Mark Word，它是实现轻量级锁和偏向锁的关键。
  另外一部分存储的是指向方法区对象类型数据的指针（Klass Point），如果对象是数组的话，还会有一个额外的部分用于存储数据的长度。
-
+  nolock->偏向锁 ->spinlock ->light lock  ->heavylcok(system level 涉及到用户态到内核态切换)
+ // MARK 启用参数:
+ -XX:+UseBiasedLocking
+ // MARK  关闭延迟:
+ -XX:BiasedLockingStartupDelay=0
+ // MARK  禁用参数:
+ -XX:-UseBiasedLocking
  */
