@@ -1,0 +1,403 @@
+Alexander:warlord suguangqiang$ mvn dependency:tree
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] warlord
+[INFO] warlord-much
+[INFO] warlord-curator
+[INFO] warlord-concurrent
+[INFO] warlord-cglib
+[INFO] warlord-common
+[INFO] warlord-tensor
+[INFO] warlord-swagger
+[INFO] warlord-netty
+[INFO] warlord-springboot
+[INFO] warlord-reactor
+[INFO] warlord-vertx
+[INFO] A lite Rx API for the JVM Hands-on
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord ---
+[INFO] com.suood.warlord:warlord:pom:1.0-SNAPSHOT
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-much 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-much ---
+[INFO] com.suood.warlord:warlord-much:jar:1.0-SNAPSHOT
+[INFO] +- com.google.guava:guava:jar:28.1-jre:compile
+[INFO] |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  +- org.checkerframework:checker-qual:jar:2.8.1:compile
+[INFO] |  +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
+[INFO] |  +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
+[INFO] +- org.apache.commons:commons-math:jar:2.2:compile
+[INFO] +- junit:junit:jar:4.12:compile
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] +- org.apache.commons:commons-collections4:jar:4.2:compile
+[INFO] \- joda-time:joda-time:jar:2.10.1:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-curator 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-curator ---
+[INFO] com.suood.warlord:warlord-curator:jar:1.0-SNAPSHOT
+[INFO] +- org.apache.curator:curator-x-discovery:jar:4.0.0:compile
+[INFO] |  \- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] |     \- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] +- org.apache.curator:curator-x-async:jar:4.0.0:compile
+[INFO] |  \- org.apache.curator:curator-framework:jar:4.0.0:compile
+[INFO] +- org.apache.curator:curator-x-discovery-server:jar:4.0.0:compile
+[INFO] |  \- javax.ws.rs:jsr311-api:jar:1.1.1:compile
+[INFO] +- org.apache.curator:curator-client:jar:4.0.0:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.5.3-beta:compile
+[INFO] |  |  +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] |  |  +- log4j:log4j:jar:1.2.17:compile
+[INFO] |  |  \- io.netty:netty:jar:3.10.5.Final:compile
+[INFO] |  +- com.google.guava:guava:jar:20.0:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.6:compile
+[INFO] \- org.apache.curator:curator-recipes:jar:4.0.0:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-concurrent 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-concurrent ---
+[INFO] com.suood.warlord:warlord-concurrent:jar:1.0-SNAPSHOT
+[INFO] \- com.google.guava:guava:jar:28.1-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.8.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
+[INFO]    +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-cglib 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-cglib ---
+[INFO] com.suood.warlord:warlord-cglib:jar:1.0-SNAPSHOT
+[INFO] \- cglib:cglib:jar:3.3.0:compile
+[INFO]    \- org.ow2.asm:asm:jar:7.1:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-common 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-common ---
+[INFO] com.suood.warlord:warlord-common:jar:1.0-SNAPSHOT
+[INFO] +- com.google.guava:guava:jar:28.1-jre:compile
+[INFO] |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  +- org.checkerframework:checker-qual:jar:2.8.1:compile
+[INFO] |  +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
+[INFO] |  +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
+[INFO] +- org.apache.commons:commons-math:jar:2.2:compile
+[INFO] +- junit:junit:jar:4.12:compile
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:compile
+[INFO] +- com.alibaba:fastjson:jar:1.2.54:compile
+[INFO] +- org.apache.commons:commons-csv:jar:1.6:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
+[INFO] +- com.moonsinfo:snowflake:jar:1.1:compile
+[INFO] +- org.openjdk.jol:jol-core:jar:0.9:compile
+[INFO] +- org.openjdk.jmh:jmh-core:jar:1.19:compile
+[INFO] |  +- net.sf.jopt-simple:jopt-simple:jar:4.6:compile
+[INFO] |  \- org.apache.commons:commons-math3:jar:3.2:compile
+[INFO] \- org.openjdk.jmh:jmh-generator-annprocess:jar:1.19:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-tensor 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-tensor ---
+[INFO] com.suood.warlord:warlord-tensor:jar:1.0-SNAPSHOT
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-swagger 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-swagger ---
+[INFO] com.suood.warlord:warlord-swagger:jar:1.0-SNAPSHOT
+[INFO] \- com.google.guava:guava:jar:28.1-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.8.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
+[INFO]    +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-netty 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-netty ---
+[INFO] com.suood.warlord:warlord-netty:jar:1.0-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO] |  |  |  |  +- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO] |  |  |  |  \- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.11.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
+[INFO] |  |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[INFO] |  |  +- org.springframework:spring-core:jar:5.1.3.RELEASE:compile
+[INFO] |  |  |  \- org.springframework:spring-jcl:jar:5.1.3.RELEASE:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.23:runtime
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-actuator:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.9.7:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.9.7:compile
+[INFO] |  |  +- org.springframework:spring-context:jar:5.1.3.RELEASE:compile
+[INFO] |  |  |  +- org.springframework:spring-aop:jar:5.1.3.RELEASE:compile
+[INFO] |  |  |  +- org.springframework:spring-beans:jar:5.1.3.RELEASE:compile
+[INFO] |  |  |  \- org.springframework:spring-expression:jar:5.1.3.RELEASE:compile
+[INFO] |  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.7:runtime
+[INFO] |  \- io.micrometer:micrometer-core:jar:1.1.1:compile
+[INFO] |     +- org.hdrhistogram:HdrHistogram:jar:2.1.9:compile
+[INFO] |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
+[INFO] +- io.netty:netty-codec-http:jar:4.1.31.Final:compile
+[INFO] |  \- io.netty:netty-codec:jar:4.1.31.Final:compile
+[INFO] +- io.netty:netty-common:jar:4.1.31.Final:compile
+[INFO] +- io.netty:netty-handler:jar:4.1.31.Final:compile
+[INFO] |  +- io.netty:netty-buffer:jar:4.1.31.Final:compile
+[INFO] |  \- io.netty:netty-transport:jar:4.1.31.Final:compile
+[INFO] |     \- io.netty:netty-resolver:jar:4.1.31.Final:compile
+[INFO] +- io.netty:netty-transport-native-epoll:jar:4.1.31.Final:compile
+[INFO] |  \- io.netty:netty-transport-native-unix-common:jar:4.1.31.Final:compile
+[INFO] +- log4j:log4j:jar:1.2.17:compile
+[INFO] +- com.google.protobuf:protobuf-java:jar:3.1.0:compile
+[INFO] +- io.grpc:grpc-netty:jar:1.25.0:compile
+[INFO] |  +- io.grpc:grpc-core:jar:1.25.0:compile (version selected from constraint [1.25.0,1.25.0])
+[INFO] |  |  +- com.google.code.gson:gson:jar:2.8.5:compile
+[INFO] |  |  +- com.google.android:annotations:jar:4.1.1.4:compile
+[INFO] |  |  +- io.perfmark:perfmark-api:jar:0.19.0:compile
+[INFO] |  |  +- io.opencensus:opencensus-api:jar:0.21.0:compile
+[INFO] |  |  \- io.opencensus:opencensus-contrib-grpc-metrics:jar:0.21.0:compile
+[INFO] |  +- io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])
+[INFO] |  \- io.netty:netty-handler-proxy:jar:4.1.42.Final:compile
+[INFO] |     \- io.netty:netty-codec-socks:jar:4.1.42.Final:compile
+[INFO] +- io.grpc:grpc-protobuf:jar:1.25.0:compile
+[INFO] |  +- io.grpc:grpc-api:jar:1.25.0:compile
+[INFO] |  |  +- io.grpc:grpc-context:jar:1.25.0:compile
+[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.3:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  |  \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:compile
+[INFO] |  +- com.google.guava:guava:jar:28.1-android:compile
+[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |  +- org.checkerframework:checker-compat-qual:jar:2.5.5:compile
+[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  +- com.google.api.grpc:proto-google-common-protos:jar:1.12.0:compile
+[INFO] |  \- io.grpc:grpc-protobuf-lite:jar:1.25.0:compile
+[INFO] \- io.grpc:grpc-stub:jar:1.25.0:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-springboot 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-springboot ---
+[INFO] com.suood.warlord:warlord-springboot:jar:1.0-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.1.1.RELEASE:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.1:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.11.1:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.25:compile
+[INFO] |  |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.23:runtime
+[INFO] |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-actuator:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.9.7:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.9.7:compile
+[INFO] |  |  +- org.springframework:spring-context:jar:5.1.3.RELEASE:compile
+[INFO] |  |  |  \- org.springframework:spring-expression:jar:5.1.3.RELEASE:compile
+[INFO] |  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.7:compile
+[INFO] |  \- io.micrometer:micrometer-core:jar:1.1.1:compile
+[INFO] |     +- org.hdrhistogram:HdrHistogram:jar:2.1.9:compile
+[INFO] |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-webflux:jar:2.1.1.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.1.1.RELEASE:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.7:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.7:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-reactor-netty:jar:2.1.1.RELEASE:compile
+[INFO] |  |  \- io.projectreactor.netty:reactor-netty:jar:0.8.3.RELEASE:compile
+[INFO] |  |     +- io.netty:netty-codec-http:jar:4.1.31.Final:compile
+[INFO] |  |     |  \- io.netty:netty-codec:jar:4.1.31.Final:compile
+[INFO] |  |     +- io.netty:netty-codec-http2:jar:4.1.31.Final:compile
+[INFO] |  |     +- io.netty:netty-handler:jar:4.1.31.Final:compile
+[INFO] |  |     |  +- io.netty:netty-buffer:jar:4.1.31.Final:compile
+[INFO] |  |     |  \- io.netty:netty-transport:jar:4.1.31.Final:compile
+[INFO] |  |     |     \- io.netty:netty-resolver:jar:4.1.31.Final:compile
+[INFO] |  |     +- io.netty:netty-handler-proxy:jar:4.1.31.Final:compile
+[INFO] |  |     |  \- io.netty:netty-codec-socks:jar:4.1.31.Final:compile
+[INFO] |  |     \- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.31.Final:compile
+[INFO] |  |        +- io.netty:netty-common:jar:4.1.31.Final:compile
+[INFO] |  |        \- io.netty:netty-transport-native-unix-common:jar:4.1.31.Final:compile
+[INFO] |  +- org.hibernate.validator:hibernate-validator:jar:6.0.13.Final:compile
+[INFO] |  |  +- javax.validation:validation-api:jar:2.0.1.Final:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile
+[INFO] |  |  \- com.fasterxml:classmate:jar:1.3.4:compile
+[INFO] |  +- org.springframework:spring-web:jar:5.1.3.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:5.1.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-webflux:jar:5.1.3.RELEASE:compile
+[INFO] |  \- org.synchronoss.cloud:nio-multipart-parser:jar:1.1.0:compile
+[INFO] |     +- org.slf4j:slf4j-api:jar:1.7.12:compile
+[INFO] |     \- org.synchronoss.cloud:nio-stream-storage:jar:1.1.3:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-aop:jar:2.1.1.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:5.1.3.RELEASE:compile
+[INFO] |  \- org.aspectj:aspectjweaver:jar:1.9.2:compile
+[INFO] +- mysql:mysql-connector-java:jar:8.0.13:compile
+[INFO] |  \- com.google.protobuf:protobuf-java:jar:3.6.1:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.4:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.1.1.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.1.1.RELEASE:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.1.1.RELEASE:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.4.0:test
+[INFO] |  |  \- net.minidev:json-smart:jar:2.3:test
+[INFO] |  |     \- net.minidev:accessors-smart:jar:1.2:test
+[INFO] |  |        \- org.ow2.asm:asm:jar:5.0.4:test
+[INFO] |  +- junit:junit:jar:4.12:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.11.1:test
+[INFO] |  +- org.mockito:mockito-core:jar:2.23.4:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.9.3:test
+[INFO] |  |  +- net.bytebuddy:byte-buddy-agent:jar:1.9.3:test
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.6:test
+[INFO] |  +- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] |  +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.0:test
+[INFO] |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO] |  +- org.springframework:spring-core:jar:5.1.3.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.1.3.RELEASE:compile
+[INFO] |  +- org.springframework:spring-test:jar:5.1.3.RELEASE:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.6.2:test
+[INFO] +- io.projectreactor:reactor-test:jar:3.2.3.RELEASE:test
+[INFO] |  \- io.projectreactor:reactor-core:jar:3.2.3.RELEASE:compile
+[INFO] |     \- org.reactivestreams:reactive-streams:jar:1.0.2:compile
+[INFO] +- com.google.guava:guava:jar:28.1-jre:compile
+[INFO] |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  +- org.checkerframework:checker-qual:jar:2.8.1:compile
+[INFO] |  +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
+[INFO] |  +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
+[INFO] +- com.github.vladimir-bukhtoyarov:bucket4j-core:jar:4.6.0:compile
+[INFO] +- org.reflections:reflections:jar:0.9.11:compile
+[INFO] |  \- org.javassist:javassist:jar:3.21.0-GA:compile
+[INFO] \- org.jetbrains:annotations:jar:17.0.0:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-reactor 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-reactor ---
+[INFO] com.suood.warlord:warlord-reactor:jar:1.0-SNAPSHOT
+[INFO] +- io.projectreactor.netty:reactor-netty:jar:0.9.2.RELEASE:compile
+[INFO] |  +- io.netty:netty-codec-http:jar:4.1.43.Final:compile
+[INFO] |  |  +- io.netty:netty-common:jar:4.1.43.Final:compile
+[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.43.Final:compile
+[INFO] |  |  +- io.netty:netty-transport:jar:4.1.43.Final:compile
+[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.43.Final:compile
+[INFO] |  |  \- io.netty:netty-codec:jar:4.1.43.Final:compile
+[INFO] |  +- io.netty:netty-codec-http2:jar:4.1.43.Final:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.43.Final:compile
+[INFO] |  +- io.netty:netty-handler-proxy:jar:4.1.43.Final:compile
+[INFO] |  |  \- io.netty:netty-codec-socks:jar:4.1.43.Final:compile
+[INFO] |  +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.43.Final:compile
+[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.43.Final:compile
+[INFO] |  \- io.projectreactor:reactor-core:jar:3.3.1.RELEASE:compile
+[INFO] |     \- org.reactivestreams:reactive-streams:jar:1.0.3:compile
+[INFO] \- com.google.guava:guava:jar:23.0:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.0.18:compile
+[INFO]    +- com.google.j2objc:j2objc-annotations:jar:1.1:compile
+[INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building warlord-vertx 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-vertx ---
+[INFO] com.suood.warlord:warlord-vertx:jar:1.0-SNAPSHOT
+[INFO] \- io.vertx:vertx-core:jar:3.6.3:compile
+[INFO]    +- io.netty:netty-common:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-buffer:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-transport:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-handler:jar:4.1.30.Final:compile
+[INFO]    |  \- io.netty:netty-codec:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-handler-proxy:jar:4.1.30.Final:compile
+[INFO]    |  \- io.netty:netty-codec-socks:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-codec-http:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-codec-http2:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-resolver:jar:4.1.30.Final:compile
+[INFO]    +- io.netty:netty-resolver-dns:jar:4.1.30.Final:compile
+[INFO]    |  \- io.netty:netty-codec-dns:jar:4.1.30.Final:compile
+[INFO]    +- com.fasterxml.jackson.core:jackson-core:jar:2.9.8:compile
+[INFO]    \- com.fasterxml.jackson.core:jackson-databind:jar:2.9.8:compile
+[INFO]       \- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building A lite Rx API for the JVM Hands-on 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ learn-reactor ---
+[INFO] com.suood.warlord:learn-reactor:jar:1.0-SNAPSHOT
+[INFO] +- io.projectreactor:reactor-core:jar:3.2.5.RELEASE:compile
+[INFO] |  \- org.reactivestreams:reactive-streams:jar:1.0.2:compile
+[INFO] +- io.projectreactor:reactor-test:jar:3.2.5.RELEASE:compile
+[INFO] +- ch.qos.logback:logback-classic:jar:1.1.3:compile
+[INFO] |  +- ch.qos.logback:logback-core:jar:1.1.3:compile
+[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.7:compile
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- io.reactivex.rxjava2:rxjava:jar:2.0.8:compile
+[INFO] \- org.assertj:assertj-core:jar:3.6.2:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] warlord ............................................ SUCCESS [  0.619 s]
+[INFO] warlord-much ....................................... SUCCESS [  0.080 s]
+[INFO] warlord-curator .................................... SUCCESS [  0.052 s]
+[INFO] warlord-concurrent ................................. SUCCESS [  0.008 s]
+[INFO] warlord-cglib ...................................... SUCCESS [  0.014 s]
+[INFO] warlord-common ..................................... SUCCESS [  0.050 s]
+[INFO] warlord-tensor ..................................... SUCCESS [  0.003 s]
+[INFO] warlord-swagger .................................... SUCCESS [  0.007 s]
+[INFO] warlord-netty ...................................... SUCCESS [  0.603 s]
+[INFO] warlord-springboot ................................. SUCCESS [  0.197 s]
+[INFO] warlord-reactor .................................... SUCCESS [  0.078 s]
+[INFO] warlord-vertx ...................................... SUCCESS [  0.084 s]
+[INFO] A lite Rx API for the JVM Hands-on ................. SUCCESS [  0.032 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.253 s
+[INFO] Finished at: 2020-01-12T02:37:11+08:00
+[INFO] Final Memory: 27M/437M
+[INFO] ------------------------------------------------------------------------
+Alexander:warlord suguangqiang$ 
+
