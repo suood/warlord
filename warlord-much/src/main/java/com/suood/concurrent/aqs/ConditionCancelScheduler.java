@@ -1,4 +1,4 @@
-package com.suood.concurrent;
+package com.suood.concurrent.aqs;
 
 import java.util.HashMap;
 import java.util.Map;

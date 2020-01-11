@@ -583,12 +583,12 @@ public abstract class AbstractQueuedSynchronizer
     private Node enq(final Node node) {
         for (;;) {
             Node t = tail;
-            if (t == null) { // Must initialize
-                if (compareAndSetHead(new Node()))
-                    tail = head;
+            if (t == null) { // Must initialize  // MAKR 如果没有初始化过队列。 所以要进行初始化操作。
+                if (compareAndSetHead(new Node()))   // MAKR CAS操作设置Head 节点
+                    tail = head;          // MAKR 初始化时，头尾都指向了同一个节点
             } else {
-                node.prev = t;
-                if (compareAndSetTail(t, node)) {
+                node.prev = t;    // 初始化过后的队列会进入这里。 当前节点的上一个节点是尾部节点
+                if (compareAndSetTail(t, node)) { //将当前节点指定为尾节点。
                     t.next = node;
                     return t;
                 }
@@ -603,17 +603,17 @@ public abstract class AbstractQueuedSynchronizer
      * @return the new node
      */
     private Node addWaiter(Node mode) {
-        Node node = new Node(Thread.currentThread(), mode);
+        Node node = new Node(Thread.currentThread(), mode);  // MARK 按照参数模式创建节点 共享锁模式或者 独占模式
         // Try the fast path of enq; backup to full enq on failure
         Node pred = tail;
-        if (pred != null) {
-            node.prev = pred;
-            if (compareAndSetTail(pred, node)) {
+        if (pred != null) {   // 尾部节点不为空 
+            node.prev = pred;  // 将新节点前置指针设置为原尾节点
+            if (compareAndSetTail(pred, node)) {     // 替换尾部节点
                 pred.next = node;
                 return node;
             }
         }
-        enq(node);
+        enq(node); //尾部节点为空时需要初始化CLH队列并入队
         return node;
     }
 

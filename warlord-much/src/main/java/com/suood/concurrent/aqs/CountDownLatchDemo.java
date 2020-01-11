@@ -1,4 +1,4 @@
-package com.suood.concurrent;
+package com.suood.concurrent.aqs;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
