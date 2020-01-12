@@ -14,20 +14,18 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] warlord-netty
 [INFO] warlord-springboot
 [INFO] warlord-reactor
-[INFO] warlord-vertx
-[INFO] A lite Rx API for the JVM Hands-on
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord ---
 [INFO] com.suood.warlord:warlord:pom:1.0-SNAPSHOT
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-much 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-much ---
 [INFO] com.suood.warlord:warlord-much:jar:1.0-SNAPSHOT
 [INFO] +- com.google.guava:guava:jar:28.1-jre:compile
@@ -44,13 +42,21 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] +- org.projectlombok:lombok:jar:1.18.2:compile
 [INFO] +- org.apache.commons:commons-collections4:jar:4.2:compile
 [INFO] \- joda-time:joda-time:jar:2.10.1:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-curator 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-curator ---
 [INFO] com.suood.warlord:warlord-curator:jar:1.0-SNAPSHOT
+[INFO] +- com.google.guava:guava:jar:28.1-jre:compile
+[INFO] |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  +- org.checkerframework:checker-qual:jar:2.8.1:compile
+[INFO] |  +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
+[INFO] |  +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
 [INFO] +- org.apache.curator:curator-x-discovery:jar:4.0.0:compile
 [INFO] |  \- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
 [INFO] |     \- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
@@ -63,14 +69,13 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] |  |  +- commons-cli:commons-cli:jar:1.2:compile
 [INFO] |  |  +- log4j:log4j:jar:1.2.17:compile
 [INFO] |  |  \- io.netty:netty:jar:3.10.5.Final:compile
-[INFO] |  +- com.google.guava:guava:jar:20.0:compile
 [INFO] |  \- org.slf4j:slf4j-api:jar:1.7.6:compile
 [INFO] \- org.apache.curator:curator-recipes:jar:4.0.0:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-concurrent 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-concurrent ---
 [INFO] com.suood.warlord:warlord-concurrent:jar:1.0-SNAPSHOT
 [INFO] \- com.google.guava:guava:jar:28.1-jre:compile
@@ -81,20 +86,20 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
 [INFO]    +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
 [INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-cglib 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-cglib ---
 [INFO] com.suood.warlord:warlord-cglib:jar:1.0-SNAPSHOT
 [INFO] \- cglib:cglib:jar:3.3.0:compile
 [INFO]    \- org.ow2.asm:asm:jar:7.1:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-common 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-common ---
 [INFO] com.suood.warlord:warlord-common:jar:1.0-SNAPSHOT
 [INFO] +- com.google.guava:guava:jar:28.1-jre:compile
@@ -117,18 +122,18 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] |  +- net.sf.jopt-simple:jopt-simple:jar:4.6:compile
 [INFO] |  \- org.apache.commons:commons-math3:jar:3.2:compile
 [INFO] \- org.openjdk.jmh:jmh-generator-annprocess:jar:1.19:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-tensor 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-tensor ---
 [INFO] com.suood.warlord:warlord-tensor:jar:1.0-SNAPSHOT
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-swagger 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-swagger ---
 [INFO] com.suood.warlord:warlord-swagger:jar:1.0-SNAPSHOT
 [INFO] \- com.google.guava:guava:jar:28.1-jre:compile
@@ -139,11 +144,11 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
 [INFO]    +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
 [INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-netty 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-netty ---
 [INFO] com.suood.warlord:warlord-netty:jar:1.0-SNAPSHOT
 [INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:compile
@@ -201,19 +206,14 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.3:compile
 [INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
 [INFO] |  |  \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.17:compile
-[INFO] |  +- com.google.guava:guava:jar:28.1-android:compile
-[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
-[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
-[INFO] |  |  +- org.checkerframework:checker-compat-qual:jar:2.5.5:compile
-[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
 [INFO] |  +- com.google.api.grpc:proto-google-common-protos:jar:1.12.0:compile
 [INFO] |  \- io.grpc:grpc-protobuf-lite:jar:1.25.0:compile
 [INFO] \- io.grpc:grpc-stub:jar:1.25.0:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-springboot 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-springboot ---
 [INFO] com.suood.warlord:warlord-springboot:jar:1.0-SNAPSHOT
 [INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:compile
@@ -309,11 +309,11 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] +- org.reflections:reflections:jar:0.9.11:compile
 [INFO] |  \- org.javassist:javassist:jar:3.21.0-GA:compile
 [INFO] \- org.jetbrains:annotations:jar:17.0.0:compile
-[INFO]                                                                         
+[INFO]
 [INFO] ------------------------------------------------------------------------
 [INFO] Building warlord-reactor 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
-[INFO] 
+[INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-reactor ---
 [INFO] com.suood.warlord:warlord-reactor:jar:1.0-SNAPSHOT
 [INFO] +- io.projectreactor.netty:reactor-netty:jar:0.9.2.RELEASE:compile
@@ -331,73 +331,33 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.43.Final:compile
 [INFO] |  \- io.projectreactor:reactor-core:jar:3.3.1.RELEASE:compile
 [INFO] |     \- org.reactivestreams:reactive-streams:jar:1.0.3:compile
-[INFO] \- com.google.guava:guava:jar:23.0:compile
-[INFO]    +- com.google.code.findbugs:jsr305:jar:1.3.9:compile
-[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.0.18:compile
-[INFO]    +- com.google.j2objc:j2objc-annotations:jar:1.1:compile
-[INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:compile
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building warlord-vertx 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-vertx ---
-[INFO] com.suood.warlord:warlord-vertx:jar:1.0-SNAPSHOT
-[INFO] \- io.vertx:vertx-core:jar:3.6.3:compile
-[INFO]    +- io.netty:netty-common:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-buffer:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-transport:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-handler:jar:4.1.30.Final:compile
-[INFO]    |  \- io.netty:netty-codec:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-handler-proxy:jar:4.1.30.Final:compile
-[INFO]    |  \- io.netty:netty-codec-socks:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-codec-http:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-codec-http2:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-resolver:jar:4.1.30.Final:compile
-[INFO]    +- io.netty:netty-resolver-dns:jar:4.1.30.Final:compile
-[INFO]    |  \- io.netty:netty-codec-dns:jar:4.1.30.Final:compile
-[INFO]    +- com.fasterxml.jackson.core:jackson-core:jar:2.9.8:compile
-[INFO]    \- com.fasterxml.jackson.core:jackson-databind:jar:2.9.8:compile
-[INFO]       \- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building A lite Rx API for the JVM Hands-on 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ learn-reactor ---
-[INFO] com.suood.warlord:learn-reactor:jar:1.0-SNAPSHOT
-[INFO] +- io.projectreactor:reactor-core:jar:3.2.5.RELEASE:compile
-[INFO] |  \- org.reactivestreams:reactive-streams:jar:1.0.2:compile
-[INFO] +- io.projectreactor:reactor-test:jar:3.2.5.RELEASE:compile
-[INFO] +- ch.qos.logback:logback-classic:jar:1.1.3:compile
-[INFO] |  +- ch.qos.logback:logback-core:jar:1.1.3:compile
-[INFO] |  \- org.slf4j:slf4j-api:jar:1.7.7:compile
-[INFO] +- junit:junit:jar:4.12:test
-[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
-[INFO] +- io.reactivex.rxjava2:rxjava:jar:2.0.8:compile
-[INFO] \- org.assertj:assertj-core:jar:3.6.2:compile
+[INFO] \- com.google.guava:guava:jar:28.1-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.8.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.2:compile
+[INFO]    +- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary:
-[INFO] 
-[INFO] warlord ............................................ SUCCESS [  0.619 s]
-[INFO] warlord-much ....................................... SUCCESS [  0.080 s]
-[INFO] warlord-curator .................................... SUCCESS [  0.052 s]
-[INFO] warlord-concurrent ................................. SUCCESS [  0.008 s]
-[INFO] warlord-cglib ...................................... SUCCESS [  0.014 s]
-[INFO] warlord-common ..................................... SUCCESS [  0.050 s]
-[INFO] warlord-tensor ..................................... SUCCESS [  0.003 s]
-[INFO] warlord-swagger .................................... SUCCESS [  0.007 s]
-[INFO] warlord-netty ...................................... SUCCESS [  0.603 s]
-[INFO] warlord-springboot ................................. SUCCESS [  0.197 s]
-[INFO] warlord-reactor .................................... SUCCESS [  0.078 s]
-[INFO] warlord-vertx ...................................... SUCCESS [  0.084 s]
-[INFO] A lite Rx API for the JVM Hands-on ................. SUCCESS [  0.032 s]
+[INFO]
+[INFO] warlord ............................................ SUCCESS [  0.639 s]
+[INFO] warlord-much ....................................... SUCCESS [  0.058 s]
+[INFO] warlord-curator .................................... SUCCESS [  0.042 s]
+[INFO] warlord-concurrent ................................. SUCCESS [  0.006 s]
+[INFO] warlord-cglib ...................................... SUCCESS [  0.007 s]
+[INFO] warlord-common ..................................... SUCCESS [  0.042 s]
+[INFO] warlord-tensor ..................................... SUCCESS [  0.002 s]
+[INFO] warlord-swagger .................................... SUCCESS [  0.006 s]
+[INFO] warlord-netty ...................................... SUCCESS [  0.385 s]
+[INFO] warlord-springboot ................................. SUCCESS [  0.164 s]
+[INFO] warlord-reactor .................................... SUCCESS [  0.068 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 2.253 s
-[INFO] Finished at: 2020-01-12T02:37:11+08:00
-[INFO] Final Memory: 27M/437M
+[INFO] Total time: 1.848 s
+[INFO] Finished at: 2020-01-12T03:01:44+08:00
+[INFO] Final Memory: 25M/309M
 [INFO] ------------------------------------------------------------------------
-Alexander:warlord suguangqiang$ 
-
+Alexander:warlord suguangqiang$
