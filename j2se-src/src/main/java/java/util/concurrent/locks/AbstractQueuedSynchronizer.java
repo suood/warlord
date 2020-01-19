@@ -1628,12 +1628,12 @@ public abstract class AbstractQueuedSynchronizer
      * @param node the node
      * @return true if is reacquiring
      */
-    final boolean isOnSyncQueue(Node node) {
+    final boolean isOnSyncQueue(Node node) {   // MARK 确认是否是 同步队列 即变种CLH队列
         if (node.waitStatus == Node.CONDITION || node.prev == null)
             return false;
         if (node.next != null) // If has successor, it must be on queue
             return true;
-        /*
+        /* // MARK 由于 CAS会失败，从队尾获取。 
          * node.prev can be non-null, but not yet on queue because
          * the CAS to place it on queue can fail. So we have to
          * traverse from tail to make sure it actually made it.  It
@@ -1998,7 +1998,7 @@ public abstract class AbstractQueuedSynchronizer
          * before signalled, REINTERRUPT if after signalled, or
          * 0 if not interrupted.
          */
-        private int checkInterruptWhileWaiting(Node node) {
+        private int checkInterruptWhileWaiting(Node node) {   // MARK 等待时 检查中断是  reinterrupt  还是抛出 InterruptedException 中断
             return Thread.interrupted() ?
                 (transferAfterCancelledWait(node) ? THROW_IE : REINTERRUPT) :
                 0;
@@ -2035,8 +2035,8 @@ public abstract class AbstractQueuedSynchronizer
             Node node = addConditionWaiter();
             int savedState = fullyRelease(node);
             int interruptMode = 0;
-            while (!isOnSyncQueue(node)) {
-                LockSupport.park(this);
+            while (!isOnSyncQueue(node)) { // 确认当前节点不在同步队列中
+                LockSupport.park(this);  // 中断当前线程。
                 if ((interruptMode = checkInterruptWhileWaiting(node)) != 0)
                     break;
             }
