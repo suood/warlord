@@ -1720,9 +1720,9 @@ public abstract class AbstractQueuedSynchronizer
         boolean failed = true;
         try {
             int savedState = getState();
-            if (release(savedState)) {
+            if (release(savedState)) {   // MARK 可重入锁，会完全释放所有的冲入次数。将锁状态恢复初始状态。
                 failed = false;
-                return savedState;
+                return savedState; // MARK 将释放前状态返回
             } else {
                 throw new IllegalMonitorStateException();
             }
@@ -1849,15 +1849,15 @@ public abstract class AbstractQueuedSynchronizer
             Node t = lastWaiter;
             // If lastWaiter is cancelled, clean out.
             if (t != null && t.waitStatus != Node.CONDITION) {
-                unlinkCancelledWaiters();
+                unlinkCancelledWaiters(); //清理已经处于 cancalled 状态的线程
                 t = lastWaiter;
             }
             Node node = new Node(Thread.currentThread(), Node.CONDITION);
             if (t == null)
-                firstWaiter = node;
+                firstWaiter = node;// MARK 队列为空 那么当前节点是第一个节点
             else
-                t.nextWaiter = node;
-            lastWaiter = node;
+                t.nextWaiter = node;// MARK 队列非空，原最后节点的后续节点是本节点。
+            lastWaiter = node; //本节点作为最后一个节点
             return node;
         }
 
@@ -2043,7 +2043,7 @@ public abstract class AbstractQueuedSynchronizer
             if (acquireQueued(node, savedState) && interruptMode != THROW_IE)
                 interruptMode = REINTERRUPT;
             if (node.nextWaiter != null) // clean up if cancelled
-                unlinkCancelledWaiters();
+                unlinkCancelledWaiters(); //清理 cancelled 状态的 线程
             if (interruptMode != 0)
                 reportInterruptAfterWait(interruptMode);
         }
