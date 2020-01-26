@@ -1649,7 +1649,7 @@ public abstract class AbstractQueuedSynchronizer
      * Called only when needed by isOnSyncQueue.
      * @return true if present
      */
-    private boolean findNodeFromTail(Node node) {
+    private boolean findNodeFromTail(Node node) { // MARK 遍历整个变种CLH队列，确认传入参数节点是否在队列中。
         Node t = tail;
         for (;;) {
             if (t == node)
