@@ -1813,9 +1813,9 @@ public abstract class AbstractQueuedLongSynchronizer
             if (Thread.interrupted())
                 throw new InterruptedException();
             Node node = addConditionWaiter();
-            long savedState = fullyRelease(node);
+            long savedState = fullyRelease(node);  // MARK 释放所有的锁状态值。 重入几次就是放几次
             int interruptMode = 0;
-            while (!isOnSyncQueue(node)) {
+            while (!isOnSyncQueue(node)) {  // MARK 判断当前节点是否在同步队列中
                 LockSupport.park(this);
                 if ((interruptMode = checkInterruptWhileWaiting(node)) != 0)
                     break;

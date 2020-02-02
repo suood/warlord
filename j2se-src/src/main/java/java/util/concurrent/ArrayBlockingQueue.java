@@ -398,7 +398,7 @@ public class ArrayBlockingQueue<E> extends AbstractQueue<E>
     public E take() throws InterruptedException {
         final ReentrantLock lock = this.lock;
         lock.lockInterruptibly();
-        try {
+        try {    // MARK 如果是空的状态，那么我们将condition notEmpty 调用 await 将相关的线程 LockSupport.park()
             while (count == 0)
                 notEmpty.await();
             return dequeue();
