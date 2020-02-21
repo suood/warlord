@@ -10,7 +10,7 @@
     <artifactId>warlord-netty</artifactId>
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <netty-version>4.1.31.Final</netty-version>
+        <netty-version>4.1.43.Final</netty-version>
         <grpc.version>1.25.0</grpc.version>
         <springboot.version>2.1.1.RELEASE</springboot.version>
     </properties>

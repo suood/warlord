@@ -1471,10 +1471,10 @@ public abstract class AbstractQueuedLongSynchronizer
      *
      * @param node the node
      * @return true if cancelled before the node was signalled
-     */
+     */                                  // MARK 灰常重要
     final boolean transferAfterCancelledWait(Node node) {
-        if (compareAndSetWaitStatus(node, Node.CONDITION, 0)) {
-            enq(node);
+        if (compareAndSetWaitStatus(node, Node.CONDITION, 0)) { // MARK 变更状态
+            enq(node);  // MARK 加入同步队列
             return true;
         }
         /*
@@ -1484,7 +1484,7 @@ public abstract class AbstractQueuedLongSynchronizer
          * spin.
          */
         while (!isOnSyncQueue(node))
-            Thread.yield();
+            Thread.yield();// MARK 这里？
         return false;
     }
 
@@ -1816,8 +1816,8 @@ public abstract class AbstractQueuedLongSynchronizer
             long savedState = fullyRelease(node);  // MARK 释放所有的锁状态值。 重入几次就是放几次
             int interruptMode = 0;
             while (!isOnSyncQueue(node)) {  // MARK 判断当前节点是否在同步队列中
-                LockSupport.park(this);
-                if ((interruptMode = checkInterruptWhileWaiting(node)) != 0)
+                LockSupport.park(this);    // MARK 当不在同步队列中时 停止当前线程 不要一直循环
+                if ((interruptMode = checkInterruptWhileWaiting(node)) != 0) // MARK 是异常中断还是 正常中断 确认是否可以被唤醒
                     break;
             }
             if (acquireQueued(node, savedState) && interruptMode != THROW_IE)

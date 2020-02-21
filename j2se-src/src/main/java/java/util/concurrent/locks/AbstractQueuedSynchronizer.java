@@ -1696,7 +1696,7 @@ public abstract class AbstractQueuedSynchronizer
      */
     final boolean transferAfterCancelledWait(Node node) {
         if (compareAndSetWaitStatus(node, Node.CONDITION, 0)) {
-            enq(node);
+            enq(node);  // MARK 加入同步队列
             return true;
         }
         /*
@@ -2033,7 +2033,7 @@ public abstract class AbstractQueuedSynchronizer
             if (Thread.interrupted())
                 throw new InterruptedException();
             Node node = addConditionWaiter();
-            int savedState = fullyRelease(node);
+            int savedState = fullyRelease(node); // MARK 彻底释放重入锁
             int interruptMode = 0;
             while (!isOnSyncQueue(node)) { // 确认当前节点不在同步队列中
                 LockSupport.park(this);  // 中断当前线程。

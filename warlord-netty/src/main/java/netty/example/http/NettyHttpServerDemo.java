@@ -36,6 +36,8 @@ public class NettyHttpServerDemo {
       final ServerBootstrap bootstrap = new ServerBootstrap()
           .group(masterGroup, slaveGroup)
           .channel(Epoll.isAvailable() ? EpollServerSocketChannel.class : NioServerSocketChannel.class)
+//      ChannelOutboundHandlerAdapter          ChannelInboundHandlerAdapter 分别是 出站handler 和 入站 handler 需要继承的类.
+//      netty 在调用时，会忽略反向的handler
           .childHandler(new ChannelInboundHandlerAdapter(){
               
           })
