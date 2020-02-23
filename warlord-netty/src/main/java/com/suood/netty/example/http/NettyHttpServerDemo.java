@@ -1,4 +1,4 @@
-package netty.example.http;
+package com.suood.netty.example.http;
 
 
 import io.netty.bootstrap.ServerBootstrap;
@@ -25,7 +25,7 @@ public class NettyHttpServerDemo {
   // event loop   nio or epoll  lt or et ;
   private final EventLoopGroup masterGroup = Epoll.isAvailable() ? new EpollEventLoopGroup(1) : new NioEventLoopGroup(1);
 
-  private final EventLoopGroup slaveGroup = Epoll.isAvailable() ? new EpollEventLoopGroup(1) : new NioEventLoopGroup(1);
+  private final EventLoopGroup slaveGroup = Epoll.isAvailable() ? new EpollEventLoopGroup() : new NioEventLoopGroup(1);
 
   public void start() // #1
   {
@@ -37,7 +37,7 @@ public class NettyHttpServerDemo {
           .group(masterGroup, slaveGroup)
           .channel(Epoll.isAvailable() ? EpollServerSocketChannel.class : NioServerSocketChannel.class)
 //      ChannelOutboundHandlerAdapter          ChannelInboundHandlerAdapter 分别是 出站handler 和 入站 handler 需要继承的类.
-//      netty 在调用时，会忽略反向的handler
+//      com.suood.netty 在调用时，会忽略反向的handler
           .childHandler(new ChannelInboundHandlerAdapter(){
               
           })

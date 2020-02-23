@@ -1,4 +1,4 @@
-package netty.example.http;
+package com.suood.netty.example.http;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;

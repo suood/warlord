@@ -11,7 +11,7 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] warlord-common
 [INFO] warlord-tensor
 [INFO] warlord-swagger
-[INFO] warlord-netty
+[INFO] warlord-com.suood.netty
 [INFO] warlord-springboot
 [INFO] warlord-reactor
 [INFO]
@@ -68,7 +68,7 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] |  +- org.apache.zookeeper:zookeeper:jar:3.5.3-beta:compile
 [INFO] |  |  +- commons-cli:commons-cli:jar:1.2:compile
 [INFO] |  |  +- log4j:log4j:jar:1.2.17:compile
-[INFO] |  |  \- io.netty:netty:jar:3.10.5.Final:compile
+[INFO] |  |  \- io.com.suood.netty:com.suood.netty:jar:3.10.5.Final:compile
 [INFO] |  \- org.slf4j:slf4j-api:jar:1.7.6:compile
 [INFO] \- org.apache.curator:curator-recipes:jar:4.0.0:compile
 [INFO]
@@ -146,11 +146,11 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO]    \- org.codehaus.mojo:animal-sniffer-annotations:jar:1.18:compile
 [INFO]
 [INFO] ------------------------------------------------------------------------
-[INFO] Building warlord-netty 1.0-SNAPSHOT
+[INFO] Building warlord-com.suood.netty 1.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO]
-[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-netty ---
-[INFO] com.suood.warlord:warlord-netty:jar:1.0-SNAPSHOT
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-com.suood.netty ---
+[INFO] com.suood.warlord:warlord-com.suood.netty:jar:1.0-SNAPSHOT
 [INFO] +- org.springframework.boot:spring-boot-starter-actuator:jar:2.1.1.RELEASE:compile
 [INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.1.1.RELEASE:compile
 [INFO] |  |  +- org.springframework.boot:spring-boot:jar:2.1.1.RELEASE:compile
@@ -179,27 +179,27 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] |  \- io.micrometer:micrometer-core:jar:1.1.1:compile
 [INFO] |     +- org.hdrhistogram:HdrHistogram:jar:2.1.9:compile
 [INFO] |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
-[INFO] +- io.netty:netty-codec-http:jar:4.1.31.Final:compile
-[INFO] |  \- io.netty:netty-codec:jar:4.1.31.Final:compile
-[INFO] +- io.netty:netty-common:jar:4.1.31.Final:compile
-[INFO] +- io.netty:netty-handler:jar:4.1.31.Final:compile
-[INFO] |  +- io.netty:netty-buffer:jar:4.1.31.Final:compile
-[INFO] |  \- io.netty:netty-transport:jar:4.1.31.Final:compile
-[INFO] |     \- io.netty:netty-resolver:jar:4.1.31.Final:compile
-[INFO] +- io.netty:netty-transport-native-epoll:jar:4.1.31.Final:compile
-[INFO] |  \- io.netty:netty-transport-native-unix-common:jar:4.1.31.Final:compile
+[INFO] +- io.com.suood.netty:com.suood.netty-codec-http:jar:4.1.31.Final:compile
+[INFO] |  \- io.com.suood.netty:com.suood.netty-codec:jar:4.1.31.Final:compile
+[INFO] +- io.com.suood.netty:com.suood.netty-common:jar:4.1.31.Final:compile
+[INFO] +- io.com.suood.netty:com.suood.netty-handler:jar:4.1.31.Final:compile
+[INFO] |  +- io.com.suood.netty:com.suood.netty-buffer:jar:4.1.31.Final:compile
+[INFO] |  \- io.com.suood.netty:com.suood.netty-transport:jar:4.1.31.Final:compile
+[INFO] |     \- io.com.suood.netty:com.suood.netty-resolver:jar:4.1.31.Final:compile
+[INFO] +- io.com.suood.netty:com.suood.netty-transport-native-epoll:jar:4.1.31.Final:compile
+[INFO] |  \- io.com.suood.netty:com.suood.netty-transport-native-unix-common:jar:4.1.31.Final:compile
 [INFO] +- log4j:log4j:jar:1.2.17:compile
 [INFO] +- com.google.protobuf:protobuf-java:jar:3.1.0:compile
-[INFO] +- io.grpc:grpc-netty:jar:1.25.0:compile
+[INFO] +- io.grpc:grpc-com.suood.netty:jar:1.25.0:compile
 [INFO] |  +- io.grpc:grpc-core:jar:1.25.0:compile (version selected from constraint [1.25.0,1.25.0])
 [INFO] |  |  +- com.google.code.gson:gson:jar:2.8.5:compile
 [INFO] |  |  +- com.google.android:annotations:jar:4.1.1.4:compile
 [INFO] |  |  +- io.perfmark:perfmark-api:jar:0.19.0:compile
 [INFO] |  |  +- io.opencensus:opencensus-api:jar:0.21.0:compile
 [INFO] |  |  \- io.opencensus:opencensus-contrib-grpc-metrics:jar:0.21.0:compile
-[INFO] |  +- io.netty:netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])
-[INFO] |  \- io.netty:netty-handler-proxy:jar:4.1.42.Final:compile
-[INFO] |     \- io.netty:netty-codec-socks:jar:4.1.42.Final:compile
+[INFO] |  +- io.com.suood.netty:com.suood.netty-codec-http2:jar:4.1.42.Final:compile (version selected from constraint [4.1.42.Final,4.1.42.Final])
+[INFO] |  \- io.com.suood.netty:com.suood.netty-handler-proxy:jar:4.1.42.Final:compile
+[INFO] |     \- io.com.suood.netty:com.suood.netty-codec-socks:jar:4.1.42.Final:compile
 [INFO] +- io.grpc:grpc-protobuf:jar:1.25.0:compile
 [INFO] |  +- io.grpc:grpc-api:jar:1.25.0:compile
 [INFO] |  |  +- io.grpc:grpc-context:jar:1.25.0:compile
@@ -243,20 +243,20 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.1.1.RELEASE:compile
 [INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.7:compile
 [INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.7:compile
-[INFO] |  +- org.springframework.boot:spring-boot-starter-reactor-netty:jar:2.1.1.RELEASE:compile
-[INFO] |  |  \- io.projectreactor.netty:reactor-netty:jar:0.8.3.RELEASE:compile
-[INFO] |  |     +- io.netty:netty-codec-http:jar:4.1.31.Final:compile
-[INFO] |  |     |  \- io.netty:netty-codec:jar:4.1.31.Final:compile
-[INFO] |  |     +- io.netty:netty-codec-http2:jar:4.1.31.Final:compile
-[INFO] |  |     +- io.netty:netty-handler:jar:4.1.31.Final:compile
-[INFO] |  |     |  +- io.netty:netty-buffer:jar:4.1.31.Final:compile
-[INFO] |  |     |  \- io.netty:netty-transport:jar:4.1.31.Final:compile
-[INFO] |  |     |     \- io.netty:netty-resolver:jar:4.1.31.Final:compile
-[INFO] |  |     +- io.netty:netty-handler-proxy:jar:4.1.31.Final:compile
-[INFO] |  |     |  \- io.netty:netty-codec-socks:jar:4.1.31.Final:compile
-[INFO] |  |     \- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.31.Final:compile
-[INFO] |  |        +- io.netty:netty-common:jar:4.1.31.Final:compile
-[INFO] |  |        \- io.netty:netty-transport-native-unix-common:jar:4.1.31.Final:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-reactor-com.suood.netty:jar:2.1.1.RELEASE:compile
+[INFO] |  |  \- io.projectreactor.com.suood.netty:reactor-com.suood.netty:jar:0.8.3.RELEASE:compile
+[INFO] |  |     +- io.com.suood.netty:com.suood.netty-codec-http:jar:4.1.31.Final:compile
+[INFO] |  |     |  \- io.com.suood.netty:com.suood.netty-codec:jar:4.1.31.Final:compile
+[INFO] |  |     +- io.com.suood.netty:com.suood.netty-codec-http2:jar:4.1.31.Final:compile
+[INFO] |  |     +- io.com.suood.netty:com.suood.netty-handler:jar:4.1.31.Final:compile
+[INFO] |  |     |  +- io.com.suood.netty:com.suood.netty-buffer:jar:4.1.31.Final:compile
+[INFO] |  |     |  \- io.com.suood.netty:com.suood.netty-transport:jar:4.1.31.Final:compile
+[INFO] |  |     |     \- io.com.suood.netty:com.suood.netty-resolver:jar:4.1.31.Final:compile
+[INFO] |  |     +- io.com.suood.netty:com.suood.netty-handler-proxy:jar:4.1.31.Final:compile
+[INFO] |  |     |  \- io.com.suood.netty:com.suood.netty-codec-socks:jar:4.1.31.Final:compile
+[INFO] |  |     \- io.com.suood.netty:com.suood.netty-transport-native-epoll:jar:linux-x86_64:4.1.31.Final:compile
+[INFO] |  |        +- io.com.suood.netty:com.suood.netty-common:jar:4.1.31.Final:compile
+[INFO] |  |        \- io.com.suood.netty:com.suood.netty-transport-native-unix-common:jar:4.1.31.Final:compile
 [INFO] |  +- org.hibernate.validator:hibernate-validator:jar:6.0.13.Final:compile
 [INFO] |  |  +- javax.validation:validation-api:jar:2.0.1.Final:compile
 [INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile
@@ -316,19 +316,19 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO]
 [INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ warlord-reactor ---
 [INFO] com.suood.warlord:warlord-reactor:jar:1.0-SNAPSHOT
-[INFO] +- io.projectreactor.netty:reactor-netty:jar:0.9.2.RELEASE:compile
-[INFO] |  +- io.netty:netty-codec-http:jar:4.1.43.Final:compile
-[INFO] |  |  +- io.netty:netty-common:jar:4.1.43.Final:compile
-[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.43.Final:compile
-[INFO] |  |  +- io.netty:netty-transport:jar:4.1.43.Final:compile
-[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.43.Final:compile
-[INFO] |  |  \- io.netty:netty-codec:jar:4.1.43.Final:compile
-[INFO] |  +- io.netty:netty-codec-http2:jar:4.1.43.Final:compile
-[INFO] |  +- io.netty:netty-handler:jar:4.1.43.Final:compile
-[INFO] |  +- io.netty:netty-handler-proxy:jar:4.1.43.Final:compile
-[INFO] |  |  \- io.netty:netty-codec-socks:jar:4.1.43.Final:compile
-[INFO] |  +- io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.43.Final:compile
-[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.43.Final:compile
+[INFO] +- io.projectreactor.com.suood.netty:reactor-com.suood.netty:jar:0.9.2.RELEASE:compile
+[INFO] |  +- io.com.suood.netty:com.suood.netty-codec-http:jar:4.1.43.Final:compile
+[INFO] |  |  +- io.com.suood.netty:com.suood.netty-common:jar:4.1.43.Final:compile
+[INFO] |  |  +- io.com.suood.netty:com.suood.netty-buffer:jar:4.1.43.Final:compile
+[INFO] |  |  +- io.com.suood.netty:com.suood.netty-transport:jar:4.1.43.Final:compile
+[INFO] |  |  |  \- io.com.suood.netty:com.suood.netty-resolver:jar:4.1.43.Final:compile
+[INFO] |  |  \- io.com.suood.netty:com.suood.netty-codec:jar:4.1.43.Final:compile
+[INFO] |  +- io.com.suood.netty:com.suood.netty-codec-http2:jar:4.1.43.Final:compile
+[INFO] |  +- io.com.suood.netty:com.suood.netty-handler:jar:4.1.43.Final:compile
+[INFO] |  +- io.com.suood.netty:com.suood.netty-handler-proxy:jar:4.1.43.Final:compile
+[INFO] |  |  \- io.com.suood.netty:com.suood.netty-codec-socks:jar:4.1.43.Final:compile
+[INFO] |  +- io.com.suood.netty:com.suood.netty-transport-native-epoll:jar:linux-x86_64:4.1.43.Final:compile
+[INFO] |  |  \- io.com.suood.netty:com.suood.netty-transport-native-unix-common:jar:4.1.43.Final:compile
 [INFO] |  \- io.projectreactor:reactor-core:jar:3.3.1.RELEASE:compile
 [INFO] |     \- org.reactivestreams:reactive-streams:jar:1.0.3:compile
 [INFO] \- com.google.guava:guava:jar:28.1-jre:compile
@@ -350,7 +350,7 @@ Alexander:warlord suguangqiang$ mvn dependency:tree
 [INFO] warlord-common ..................................... SUCCESS [  0.042 s]
 [INFO] warlord-tensor ..................................... SUCCESS [  0.002 s]
 [INFO] warlord-swagger .................................... SUCCESS [  0.006 s]
-[INFO] warlord-netty ...................................... SUCCESS [  0.385 s]
+[INFO] warlord-com.suood.netty ...................................... SUCCESS [  0.385 s]
 [INFO] warlord-springboot ................................. SUCCESS [  0.164 s]
 [INFO] warlord-reactor .................................... SUCCESS [  0.068 s]
 [INFO] ------------------------------------------------------------------------

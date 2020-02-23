@@ -1,4 +1,4 @@
-package netty.example;
+package com.suood.netty.example;
 
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.epoll.Epoll;

@@ -10,7 +10,7 @@
     <artifactId>warlord-netty</artifactId>
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <netty-version>4.1.43.Final</netty-version>
+        <netty-version>4.1.42.Final</netty-version>
         <grpc.version>1.25.0</grpc.version>
         <springboot.version>2.1.1.RELEASE</springboot.version>
     </properties>
@@ -55,11 +55,7 @@
             <artifactId>protobuf-java</artifactId>
             <version>3.1.0</version>
         </dependency>
-        <dependency>
-            <groupId>io.grpc</groupId>
-            <artifactId>grpc-netty</artifactId>
-            <version>${grpc.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
@@ -76,10 +72,16 @@
             <artifactId>grpc-stub</artifactId>
             <version>${grpc.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-buffer</artifactId>
+            <version>4.1.43.Final</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
     <build>
-        <finalName>warlord-netty</finalName>
+        <finalName>warlord-com.suood.netty</finalName>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -103,40 +105,40 @@
                         </execution>
                     </executions>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-toolchains-plugin</artifactId>
-                    <version>1.0</version>
-                    <executions>
-                        <execution>
-                            <phase>validate</phase>
-                            <goals>
-                                <goal>toolchain</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <toolchains>
-                            <protobuf>
-                                <version>[2.4,2.5,3]</version>
-                            </protobuf>
-                        </toolchains>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.xolstice.maven.plugins</groupId>
-                    <artifactId>protobuf-maven-plugin</artifactId>
-                    <version>0.6.1</version>
-                    <extensions>true</extensions>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>compile-javanano</goal>
-                                <goal>test-compile-javanano</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.maven.plugins</groupId>-->
+<!--                    <artifactId>maven-toolchains-plugin</artifactId>-->
+<!--                    <version>1.0</version>-->
+<!--                    <executions>-->
+<!--                        <execution>-->
+<!--                            <phase>validate</phase>-->
+<!--                            <goals>-->
+<!--                                <goal>toolchain</goal>-->
+<!--                            </goals>-->
+<!--                        </execution>-->
+<!--                    </executions>-->
+<!--                    <configuration>-->
+<!--                        <toolchains>-->
+<!--                            <protobuf>-->
+<!--                                <version>[2.4,2.5,3]</version>-->
+<!--                            </protobuf>-->
+<!--                        </toolchains>-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
+<!--                <plugin>-->
+<!--                    <groupId>org.xolstice.maven.plugins</groupId>-->
+<!--                    <artifactId>protobuf-maven-plugin</artifactId>-->
+<!--                    <version>0.6.1</version>-->
+<!--                    <extensions>true</extensions>-->
+<!--                    <executions>-->
+<!--                        <execution>-->
+<!--                            <goals>-->
+<!--                                <goal>compile-javanano</goal>-->
+<!--                                <goal>test-compile-javanano</goal>-->
+<!--                            </goals>-->
+<!--                        </execution>-->
+<!--                    </executions>-->
+<!--                </plugin>-->
             </plugins>
     </build>
 </project>

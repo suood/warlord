@@ -1,4 +1,4 @@
-package netty.example.http;
+package com.suood.netty.example.http;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;

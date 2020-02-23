@@ -1,6 +1,6 @@
-package netty.example;
+package com.suood.netty.example;
 
-import netty.example.http.NettyHttpServerDemo;
+import com.suood.netty.example.http.NettyHttpServerDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
