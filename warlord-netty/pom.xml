@@ -37,6 +37,7 @@
             <artifactId>netty-handler</artifactId>
             <version>${netty-version}</version>
         </dependency>
+<!--      epoll -->
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-transport-native-epoll</artifactId>
