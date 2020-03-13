@@ -10,12 +10,12 @@
     <artifactId>warlord-reactor</artifactId>
     <modelVersion>4.0.0</modelVersion>
     <properties>
-        <com.suood.netty-version>4.1.31.Final</com.suood.netty-version>
+        <com.suood.netty-version>4.1.45.Final</com.suood.netty-version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>io.projectreactor.com.suood.netty</groupId>
-            <artifactId>reactor-com.suood.netty</artifactId>
+            <groupId>io.projectreactor.netty</groupId>
+            <artifactId>reactor-netty</artifactId>
             <version>0.9.2.RELEASE</version>
         </dependency>
       <dependency>
@@ -35,7 +35,7 @@
                     <configuration>
                         <source>1.8</source>
                         <target>1.8</target>/NettyHttpServerDemo.java
-                        <encoding>utf-8</encoding>
+<!--                        <encoding>utf-8</encoding>-->
                         <!--<compilerArguments>-->
                         <!--<verbose />-->
                         <!--<bootclasspath>${java.home}/lib/rt.jar</bootclasspath>-->

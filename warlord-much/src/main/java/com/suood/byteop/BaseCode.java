@@ -11,5 +11,6 @@ public class BaseCode {
     System.out.println(~a+1);//9
     int c =-0;
     System.out.println(Integer.toBinaryString(~c+1)); //0
+    int i = 1_1;
   }
 }
