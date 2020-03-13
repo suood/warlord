@@ -1,5 +1,6 @@
 package com.suood.jvm.metaspace;
 
+// MARK "asb" + 1 这种操作会进入常量池，导致 metaspace 渐渐内存紧张产生fullgc 
 public class ConstantsPool {
 
   public static void main(String[] args) {
