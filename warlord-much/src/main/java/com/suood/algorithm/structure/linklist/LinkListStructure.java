@@ -101,12 +101,24 @@ public class LinkListStructure<T> {
     return false;
   }
 
+  public boolean contain(T t) {
+    Node a = head;
+    while (a != null) {
+      if (a.value.equals(t)) {
+        return true;
+      } else {
+        a = a.next;
+      }
+    }
+    return false;
+  }
+
   public static void main(String[] args) {
     LinkListStructure<Integer> list = new LinkListStructure<Integer>(10);
     for (int i = 0; i < 10; i++) {
       list.add(new Integer(i));
     }
     list.remove(new Integer(9));
-    System.out.println(list);
+    System.out.println(list.contain(new Integer(9)));
   }
 }
