@@ -33,12 +33,14 @@ public class QueueArrayStructure<T> {
   public T denQueue() {
     Object object = objectArray[head];
     if (null != object) {
+      size--;
+      objectArray[head] = null;
       if (head == capacity - 1) {
         head = 0;
       } else {
-        objectArray[head] = null;
+
         head++;
-        size--;
+
       }
       return (T) object;
     } else {
@@ -55,6 +57,10 @@ public class QueueArrayStructure<T> {
     for (int i = 0; i < 10; i++) {
       System.out.println(queueArrayStructure.denQueue());
     }
+    queueArrayStructure.enQueue(10);
+    queueArrayStructure.denQueue();
+
+
     System.out.println("denQueue");
   }
 }
