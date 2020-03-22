@@ -1,4 +1,4 @@
-package com.suood.algorithm.structure.linklist;
+package com.suood.algorithm.structure;
 
 import java.math.BigDecimal;
 import lombok.Getter;

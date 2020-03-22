@@ -2,7 +2,7 @@ package com.suood.algorithm.structure;
 
 import lombok.Getter;
 
-public class StackStructure<T> {
+public class StackLinkStructure<T> {
 
   @Getter
   private int size;
