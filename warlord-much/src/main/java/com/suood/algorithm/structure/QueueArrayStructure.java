@@ -1,6 +1,5 @@
 package com.suood.algorithm.structure;
 
-import java.util.Optional;
 
 public class QueueArrayStructure<T> {
 
@@ -11,16 +10,17 @@ public class QueueArrayStructure<T> {
   private int size = 0;
 
   public QueueArrayStructure(int capacity) {
+    this.capacity = capacity;
     objectArray = new Object[capacity];
   }
 
   public boolean enQueue(T t) {
-    // 是否已经满了
-    if (size == capacity) {
+    // 是否已经满了 当剩余最后一个空位时，无法使用。
+    if (size == (capacity - 1)) {
       return false;
     } else {
       objectArray[tail] = t;
-      if (tail == capacity) {
+      if (tail == capacity - 1) {
         tail = 0;
       } else {
         tail++;
@@ -44,5 +44,17 @@ public class QueueArrayStructure<T> {
     } else {
       return null;
     }
+  }
+
+  public static void main(String[] args) {
+    QueueArrayStructure<Integer> queueArrayStructure = new QueueArrayStructure<Integer>(10);
+    for (int i = 0; i < 10; i++) {
+      System.out.println( queueArrayStructure.enQueue(i));
+    }
+    System.out.println("enQueue");
+    for (int i = 0; i < 10; i++) {
+      System.out.println(queueArrayStructure.denQueue());
+    }
+    System.out.println("denQueue");
   }
 }
