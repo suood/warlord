@@ -21,9 +21,11 @@ public class SelectionSort extends AbstractSort {
           min = j;
         }
       }
-      int temp = intArray[i];
-      intArray[i] = intArray[min];
-      intArray[min] = temp;
+      if (min != i) {
+        int temp = intArray[i];
+        intArray[i] = intArray[min];
+        intArray[min] = temp;
+      }
     }
   }
 
