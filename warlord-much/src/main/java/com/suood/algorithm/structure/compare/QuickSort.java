@@ -36,7 +36,7 @@ public class QuickSort extends AbstractSort {
         int temp = intArray[i];
         intArray[i] = intArray[j];
         intArray[j] = temp;
-        ++i;
+        ++i;// MARK 交换之后 分别前移后移
         --j;
         printOrigin();
       } else if (i == j) {
