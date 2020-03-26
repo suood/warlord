@@ -1,12 +1,10 @@
-package com.suood.common;// JDK 8及以上支持
+package com.suood.optimize;// JDK 8及以上支持
 //@sun.misc.Contended  //JDK8       //配合参数 -XX:-RestrictContended
 
 //@Contended
 
 
-import java.util.ArrayList;
 import org.openjdk.jol.info.ClassLayout;
-import org.openjdk.jol.info.GraphLayout;
 import sun.misc.Contended;
 
 

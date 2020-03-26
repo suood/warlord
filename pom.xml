@@ -19,6 +19,7 @@
         <module>warlord-netty</module>
         <module>warlord-springboot</module>
         <module>warlord-reactor</module>
+        <module>warlord-optimize</module>
 <!--        <module>warlord-vertx</module>-->
 <!--        <module>learn-reactor</module>-->
 <!--        <module>j2se-src</module>-->
