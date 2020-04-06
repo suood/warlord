@@ -2,28 +2,28 @@ package com.suood.nio;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.ByteBuffer;
+import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
 public class FileChannelDemo {
 
-  public void displayFileChannel() throws IOException {
-    FileInputStream inputStream = new FileInputStream("data.txt");
-    FileChannel channel = inputStream.getChannel();
-    ByteBuffer buffer = ByteBuffer.allocate((int)channel.size());
+  /**
+   * 10毫秒可以加载2G文件。
+   * @throws IOException
+   */
+  public static void displayFileChannel() throws IOException {
+    String fileName = "data.txt";
+    final FileChannel channel = new FileInputStream(fileName).getChannel();
+    MappedByteBuffer buffer = channel.map(FileChannel.MapMode.READ_ONLY, 0, channel.size());
 
-    channel.read(buffer);
-    buffer.flip();//Restore buffer to position 0 to read it
+// when finished
     
-    channel.close();
-    inputStream.close();
-//    return bytes;
+    System.out.println(buffer.asCharBuffer());
   }
 
   public static void main(String[] args) {
-    FileChannelDemo fileChannelDemo = new FileChannelDemo();
     try {
-      fileChannelDemo.displayFileChannel();
+      displayFileChannel();
     } catch (IOException e) {
       e.printStackTrace();
     }
