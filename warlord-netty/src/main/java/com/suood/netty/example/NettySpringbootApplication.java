@@ -10,9 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class NettySpringbootApplication {
 
   public static void main(String[] args) {
+
+    SpringApplication.run(NettySpringbootApplication.class, args);
     NettyHttpServerDemo nettyHttpServerDemo = new NettyHttpServerDemo();
     nettyHttpServerDemo.start();
-    SpringApplication.run(NettySpringbootApplication.class, args);
   }
 
 }

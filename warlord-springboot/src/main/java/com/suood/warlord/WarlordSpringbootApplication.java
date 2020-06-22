@@ -6,7 +6,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan({"com.suood"})
 @SpringBootApplication
-
 public class WarlordSpringbootApplication {
 
   public static void main(String[] args) {

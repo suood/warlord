@@ -17,6 +17,8 @@ import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.HttpObjectAggregator;
 import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.codec.http.HttpServerCodec;
+import io.netty.handler.timeout.IdleStateHandler;
+import java.util.concurrent.TimeUnit;
 
 public class NettyHttpServerDemo {
 
@@ -38,8 +40,8 @@ public class NettyHttpServerDemo {
           .channel(Epoll.isAvailable() ? EpollServerSocketChannel.class : NioServerSocketChannel.class)
 //      ChannelOutboundHandlerAdapter          ChannelInboundHandlerAdapter 分别是 出站handler 和 入站 handler 需要继承的类.
 //      com.suood.netty 在调用时，会忽略反向的handler
-          .childHandler(new ChannelInboundHandlerAdapter(){
-              
+          .childHandler(new ChannelInboundHandlerAdapter() {
+
           })
           .childHandler(new ChannelInitializer<SocketChannel>() // #4
           {
@@ -48,9 +50,10 @@ public class NettyHttpServerDemo {
               //有序的，莫要搞乱鸟
               ch.pipeline().addLast("codec", new HttpServerCodec());
               ch.pipeline().addLast("aggregator", new HttpObjectAggregator(512 * 1024));
-//                            ch.pipeline().addLast("request", new SelfChannelInboundHandlerAdapter() );
+
               ch.pipeline().addLast("request", new HttpRequestHandler<FullHttpRequest>());
               ch.pipeline().addLast(new HttpResponseEncoder());
+              ch.pipeline().addLast(new IdleStateHandler(10, 10, 15, TimeUnit.SECONDS));
 
             }
           })
@@ -69,6 +72,7 @@ public class NettyHttpServerDemo {
     try {
       channel.channel().closeFuture().sync();
     } catch (InterruptedException e) {
+      e.printStackTrace();
     }
   }
 
