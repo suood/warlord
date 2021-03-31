@@ -10,7 +10,7 @@
   <artifactId>warlord-optimize</artifactId>
   <modelVersion>4.0.0</modelVersion>
   <properties>
-    <guava-version>28.1-jre</guava-version>
+    <guava-version>29.0-jre</guava-version>
   </properties>
   <dependencies>
     <dependency>
