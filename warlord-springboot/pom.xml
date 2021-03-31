@@ -12,7 +12,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<springboot.version>2.1.1.RELEASE</springboot.version>
-		<guava-version>28.1-jre</guava-version>
+		<guava-version>29.0-jre</guava-version>
 	</properties>
 
 	<dependencies>
