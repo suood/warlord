@@ -22,7 +22,7 @@
         <module>warlord-optimize</module>
 <!--        <module>warlord-vertx</module>-->
 <!--        <module>learn-reactor</module>-->
-        <module>j2se-src</module>
+<!--        <module>j2se-src</module>-->
     </modules>
 
     <repositories>
@@ -43,7 +43,7 @@
     </repositories>
 
     <properties>
-        <guava-version>28.1-jre</guava-version>
+        <guava-version>30.0-jre</guava-version>
         <curator.version>4.0.0</curator.version>
     </properties>
     <build>

@@ -53,7 +53,7 @@ public class NettyHttpServerDemo {
 
               ch.pipeline().addLast("request", new HttpRequestHandler<FullHttpRequest>());
               ch.pipeline().addLast(new HttpResponseEncoder());
-              ch.pipeline().addLast(new IdleStateHandler(10, 10, 15, TimeUnit.SECONDS));
+//              ch.pipeline().addLast(new IdleStateHandler(10, 10, 15, TimeUnit.SECONDS));
 
             }
           })
