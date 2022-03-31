@@ -11,7 +11,7 @@
 	<description>warlord-springboot</description>
 	<properties>
 		<java.version>1.8</java.version>
-		<springboot.version>2.1.1.RELEASE</springboot.version>
+		<springboot.version>2.5.12</springboot.version>
 		<guava-version>30.0-jre</guava-version>
 	</properties>
 
